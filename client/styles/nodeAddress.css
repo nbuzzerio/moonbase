@@ -1,0 +1,43 @@
+.card {
+    grid-column: 3 / 9;
+    box-sizing: border-box;
+    background: gray;
+    opacity: .5;
+    border: solid 1px gray;
+    align-self: stretch;
+    justify-self: stretch;
+    margin: 5vh;
+    display: flex;
+}
+.nodeAddressBox {
+    font-size: 5rem;
+    display: flex;
+    flex: 1;
+    margin: 3% 0;
+    height: 50px;
+}
+
+.addressLabel {
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+#nodeAddress {
+    flex: 1;
+    margin-left: 3%;
+    font-size: 2.8rem;
+}
+
+#copyBtn {
+    border-radius: 3%;
+    border: solid 1px black;
+    margin-right: 3%;
+}
+
+#nodeAddress::selection{
+    color:black;
+    outline-width: 0;
+}
+#nodeAddress:focus{
+    outline-width: 0;
+}

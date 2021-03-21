@@ -1,5 +1,5 @@
 {
-  "name": "site",
+  "name": "moonbase-site",
   "version": "1.0.0",
   "description": "LTO-Moonbase webpage",
   "main": "./server/index.js",

@@ -1,0 +1,24 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main {
+    color: whitesmoke;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template: repeat(4, 1fr) / repeat(10, 1fr);  
+    min-width: 1600px;
+    min-height: 600px;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    color: rgb(134, 59, 134);
+    text-shadow: 2px 2px 30px gray;
+    font-size: 6rem;
+    grid-column: 2 / 10;
+}
