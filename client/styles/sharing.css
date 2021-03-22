@@ -1,0 +1,42 @@
+.sharingCard {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+    box-sizing: border-box;
+    background: rgba(128,128,128, 0.65);
+    border: solid 1px gray;
+    align-self: flex-end;
+    justify-self: stretch;
+    color: #804bc9;
+    border: #804bc9;
+    margin-bottom: 1vh;
+    margin-left: -5vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 4.5rem;
+    text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+    padding: 10%;
+    padding-right: 20%;
+    border-radius: 20%;
+    text-align: center;
+}
+
+.lineOne {
+    color: greenyellow;
+    margin-bottom: 1vh;
+}
+
+.lineTwo {
+    color: #e8545f;
+}
+
+
+

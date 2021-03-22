@@ -13,7 +13,7 @@ function NodeAddress() {
     }
 
     return (
-        <div className='card'>
+        <div className='addressCard'>
             <form className="nodeAddressBox">
                 <label className='addressLabel' htmlFor="nodeAddress">Lease to:</label>
                 <input type="text" id="nodeAddress" value="3Jp9rSY8BCk8DbfDRcqeULNrecWRRP7ShLr" readOnly></input>

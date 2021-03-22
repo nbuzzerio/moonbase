@@ -1,15 +1,16 @@
-.card {
-    grid-column: 3 / 9;
+.addressCard {
+    grid-column: 4 / 10;
     box-sizing: border-box;
-    background: rgba(128,128,128, 0.5);
+    background: rgba(128,128,128, 0.65);
     border: solid 1px gray;
+    border-radius: 22%;
     align-self: flex-start;
     justify-self: stretch;
-    margin: -1vh;
+    margin: -3vh;
     display: flex;
 }
 .nodeAddressBox {
-    font-size: 5rem;
+    font-size: 4rem;
     display: flex;
     flex: 1;
     margin: 3% 0;
@@ -17,16 +18,30 @@
 }
 
 .addressLabel {
-    color: rgb(184, 57, 184);
+    color: #804bc9;
     margin-top: -.5%;
     margin-left: 3%;
     font-size: 5rem;
+    text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    /* 1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191, */
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
 }
 
 #nodeAddress {
     flex: 1;
     margin-left: 3%;
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 #nodeAddress::selection{
     color:black;
