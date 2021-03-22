@@ -5,10 +5,11 @@ import '../../styles/nodeAddress.css';
 
 function NodeAddress() {
 
-    function onclick() {
+    function onclick(e) {
+        e.preventDefault();
         var copy = document.getElementById("nodeAddress");
             copy.select();
-            document.execCommand("copy")
+            document.execCommand("copy");
     }
 
     return (

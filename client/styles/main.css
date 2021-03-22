@@ -17,8 +17,8 @@
 }
 
 h1 {
-    color: rgb(134, 59, 134);
-    text-shadow: 2px 2px 30px gray;
+    color: rgb(184, 57, 184);
+    text-shadow: 3px 3px 23px grey;
     font-size: 6rem;
     grid-column: 2 / 10;
 }
