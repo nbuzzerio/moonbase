@@ -3,6 +3,8 @@ import React from 'react';
 import '../styles/main.css';
 import NodeAddress from './components/nodeAddress.jsx';
 import Sharing from './components/sharing.jsx';
+import Telegram from './components/telegram.jsx';
+import Payout from './components/payout.jsx';
 
 function App() {
     return (
@@ -10,8 +12,8 @@ function App() {
             <h1>LTO MOONBASE NODE</h1>
             <NodeAddress />
             <Sharing />
-            {/* <Payout />
-            <Telegram /> */}
+            <Telegram />
+            <Payout />
         </article>
     )
 }
