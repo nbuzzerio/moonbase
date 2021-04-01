@@ -1,0 +1,129 @@
+:root {
+    --color-primary: #814bc9;
+    --color-secondary: #9d6eda;
+    --color-accent: #edd802;
+    --color-headings: #4d0fa1;
+    --color-body: #918ca4;
+    --color-body-darker: #5c5577;
+    --color-boarder: #ccc;
+  
+    --border-radius: 30px;
+  }
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* Typography */
+@font-face {
+    font-family: spaceFont;
+    src: url(../../images/space-font.ttf);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--color-body);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    padding: 0; 
+    margin: 0;  
+  }
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+h1 {
+    font-size: 8.5vw;
+    padding-left: 3vw;
+    text-align: start;
+    font-family: spaceFont, Arial, Helvetica, sans-serif;
+    text-shadow:    1px 1px 1px #919191,
+                    1px 2px 1px #919191,
+                    1px 3px 1px #919191,
+                    1px 4px 1px #919191,
+                    1px 5px 1px #919191,
+                    1px 6px 1px #919191,
+                    1px 18px 6px rgba(16,16,16,0.4),
+                    1px 22px 10px rgba(16,16,16,0.2),
+                    1px 25px 35px rgba(16,16,16,0.2),
+                    1px 30px 60px rgba(16,16,16,0.4);
+
+}
+  
+h2 {
+font-size: 4rem;
+}
+
+h3 {
+font-size: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+      font-size: 1.8rem;
+    }
+  
+    h1 {
+      font-size: 4.5vw;
+    }
+  
+    h2 {
+      font-size: 4 rem;
+    }
+  
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+
+
+
+
+
+/* Hero */
+.hero {
+    padding-top: 3.5vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.hero__image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: circle(77% at 0 0);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding-top: 7vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      
+    .hero__image {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        clip-path: circle(95% at 0 0);
+    }
+}

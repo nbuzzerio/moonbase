@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import '../../styles/nodeAddress.css';
+import '../styles.css';
 
 
 function NodeAddress() {

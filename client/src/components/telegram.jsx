@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import '../../styles/telegram.css';
-
+import '../styles.css';
 
 function Telegram() {
     return (
