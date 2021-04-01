@@ -135,7 +135,6 @@ P {
     }
 }
 
-
 /* Buttons */
 .btn {
     border-radius: 40px;
@@ -256,4 +255,48 @@ color: #fff;
     left: 1vw;
     position: absolute;
     color: var(--color-primary--dark)
+}
+
+@media screen and (min-width: 768px) {
+  .hero .input-group {
+    margin-top: 10vw;
+    width: 60vw;
+    height: 8vw;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    align-self: center;
+    margin-left: 21vw;
+  }
+
+  .hero .input {
+      background-color: rgba(0,0,0,0);
+      font-size: 2.2vw;
+  }
+
+  .nodeAddress .input::selection {
+      outline-width: 0;
+  }
+
+  .nodeAddress .btn {
+      opacity: .8;
+      margin: 0;
+      margin-left: 1vw;
+      font-size: 1.5vw;
+      padding: 2vw 3vw;
+      border-radius: 0 29px 29px 0;
+  }
+  .nodeAddress .btn:active {
+      background-color: black;
+  }
+
+  .nodeAddress::before {
+    content: "Lease To: ";
+    width: 18vw;
+    font-size: 4vw;
+    top: 1vw;
+    left: -20vw;
+    position: absolute;
+    color: var(--color-primary--dark);
+  }
 }
