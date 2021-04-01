@@ -1,5 +1,7 @@
 :root {
     --color-primary: #814bc9;
+    --color-primary--dark: #692db8;
+    --color-secondary--light: #bf9deb;
     --color-secondary: #9d6eda;
     --color-accent: #edd802;
     --color-headings: #4d0fa1;
@@ -60,11 +62,15 @@ h1 {
 }
   
 h2 {
-font-size: 4rem;
+    font-size: 4rem;
 }
 
 h3 {
-font-size: 3rem;
+    font-size: 3rem;
+}
+
+P {
+    margin-top: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -86,7 +92,7 @@ font-size: 3rem;
   }
 
 
-
+/*  */
 
 
 /* Hero */
@@ -96,6 +102,7 @@ font-size: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
   
 .hero__image {
@@ -126,4 +133,127 @@ font-size: 3rem;
         z-index: -1;
         clip-path: circle(95% at 0 0);
     }
+}
+
+
+/* Buttons */
+.btn {
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    outline: none;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  
+.btn .icon {
+width: 2rem;
+height: 2rem;
+margin-right: 1rem;
+vertical-align: middle;
+}
+
+.btn--primary {
+background-color: var(--color-headings);
+color: #fff;
+}
+.btn--primary:hover {
+background-color: var(--color-primary--dark);
+color: #fff;
+}
+
+.btn--secondary {
+background-color: var(--color-secondary);
+color: #fff;
+}
+.btn--secondary:hover {
+background-color: var(--color-secondary--light);
+color: #fff;
+}
+
+.btn--accent {
+background-color: var(--color-accent);
+color: #fff;
+}
+.btn--accent:hover {
+background-color: orange;
+color: #fff;
+}
+
+/* Inputs */
+.input {
+    padding: 1.5rem 3.5rem;
+    border: solid 1px var(--color-boarder);
+    border-radius: var(--border-radius);
+    outline: none;
+    color: var(--color-headings);
+    font-size: 2rem;
+  }
+
+  .input-group {
+    border: 1px solid var(--color-boarder);
+    border-radius: var(--border-radius);
+    display: flex;
+  }
+  
+  .input-group .input {
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
+  }
+  
+  .input-group .btn {
+    margin: 4px;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .input {
+      font-size: 1.5rem;
+    }
+  }
+
+/* Lease Block */
+.hero .input-group {
+    margin-top: 7vw;
+    width: 85vw;
+    height: 8vw;
+    border: 0;
+    background-color: rgba(16,16,16,0.2);
+    align-self: end;
+    position: relative;
+}
+
+.hero .input {
+    background-color: rgba(0,0,0,0);
+    font-size: 2.8vw;
+}
+
+.nodeAddress .input::selection {
+    outline-width: 0;
+}
+
+.nodeAddress .btn {
+    opacity: .8;
+    margin: 0;
+    margin-left: 1vw;
+    font-size: 2.5vw;
+    padding: 2vw 3vw;
+}
+.nodeAddress .btn:active {
+    background-color: black;
+}
+
+.nodeAddress::before {
+    content: "Lease To";
+    width: 100vw;
+    font-size: 5vw;
+    top: -6vw;
+    left: 1vw;
+    position: absolute;
+    color: var(--color-primary--dark)
 }

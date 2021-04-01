@@ -10,6 +10,7 @@ function App() {
     return (
         <section class='hero'>
             <h1>LTO MOONBASE NODE</h1>
+            <NodeAddress />
             <picture>
                 {/* <source 
                     type="image/webp" 
@@ -25,7 +26,7 @@ function App() {
     )
 }
 
+
 ReactDOM.render(
     <App />, document.getElementById('home')
 );
-
