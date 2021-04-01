@@ -74,65 +74,21 @@ P {
 }
 
 @media screen and (min-width: 768px) {
-    body {
-      font-size: 1.8rem;
-    }
-  
-    h1 {
-      font-size: 4.5vw;
-    }
-  
-    h2 {
-      font-size: 4 rem;
-    }
-  
-    h3 {
-      font-size: 2.4rem;
-    }
+  body {
+    font-size: 1.8rem;
   }
 
+  h1 {
+    font-size: 4.5vw;
+  }
 
-/*  */
+  h2 {
+    font-size: 4rem;
+  }
 
-
-/* Hero */
-.hero {
-    padding-top: 3.5vw;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-  
-.hero__image {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    clip-path: circle(77% at 0 0);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
-@media screen and (min-width: 768px) {
-    .hero {
-        padding-top: 7vw;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-      
-    .hero__image {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        clip-path: circle(95% at 0 0);
-    }
+  h3 {
+    font-size: 2.4rem;
+  }
 }
 
 /* Buttons */
@@ -216,9 +172,50 @@ color: #fff;
     }
   }
 
+/* Hero */
+.hero {
+  padding-top: 3.5vw;
+  height: 55vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__image {
+  width: 100%;
+  height: 55vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  clip-path: circle(77% at 0 0);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+      padding-top: 7vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+    
+  .hero__image {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      clip-path: circle(95% at 0 0);
+  }
+}
+
 /* Lease Block */
 .hero .input-group {
-    margin-top: 7vw;
+    margin-top: 6vw;
     width: 85vw;
     height: 8vw;
     border: 0;
@@ -259,19 +256,22 @@ color: #fff;
 
 @media screen and (min-width: 768px) {
   .hero .input-group {
-    margin-top: 10vw;
-    width: 60vw;
-    height: 8vw;
+    margin-top: 30vw;
+    width: 35vw;
+    height: 4vw;
     border: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     align-self: center;
-    margin-left: 21vw;
+    margin-right: 60vw;
   }
 
   .hero .input {
       background-color: rgba(0,0,0,0);
-      font-size: 2.2vw;
+      padding: 1vw;
+      font-size: 1.2vw;
+      color: var(--color-secondary--light);
+      color:#fff;
   }
 
   .nodeAddress .input::selection {
@@ -281,9 +281,8 @@ color: #fff;
   .nodeAddress .btn {
       opacity: .8;
       margin: 0;
-      margin-left: 1vw;
       font-size: 1.5vw;
-      padding: 2vw 3vw;
+      padding: 0.2vw 2vw;
       border-radius: 0 29px 29px 0;
   }
   .nodeAddress .btn:active {
@@ -293,10 +292,156 @@ color: #fff;
   .nodeAddress::before {
     content: "Lease To: ";
     width: 18vw;
-    font-size: 4vw;
-    top: 1vw;
-    left: -20vw;
+    font-size: 3vw;
+    top: -4vw;
+    left: 1vw;
     position: absolute;
-    color: var(--color-primary--dark);
+    color: var(--color-primary--dark)
   }
 }
+
+/* Grids */
+.grid {
+  display: grid
+}
+@media screen and (min-width: 768px) { 
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) { 
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header, .card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+/* Banner */
+.banner {
+  display: block;
+  margin: 0 auto 3vw;
+  max-width: 90%;
+  height: auto;
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 768px) { 
+  .banner {
+    margin: 0 auto 5vw;
+  }
+}
+
+/* Rates */
+.rates {
+  background-color: black;
+  padding: 10vw 5vw 0;
+}
+
+.rates .rates__header {
+  text-align: center;
+  padding-bottom: 2vw;
+}
+.rates .rates__header>h2 {
+  font-size: 7rem;
+}
+
+.rates .card {
+  margin: 3vw 10vw;
+}
+
+.rates .card__header {
+  font-size: 4rem;
+}
+
+.rates__text {
+  padding: 2vw;
+}
+
+@media screen and (min-width: 768px) { 
+  .rates .card {
+    margin: 3vw 20vw;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) { 
+  .rates .card {
+    margin: 3vw 5vw;
+    font-size: 3rem;
+  }
+}
+
+/* Stats */
+.stats {
+  padding-top: 10vw;
+}
+
+.stats .stats__header {
+  text-align: center;
+  padding-bottom: 2vw;
+}
+.stats .stats__header>h2 {
+  font-size: 7rem;
+}
+
+.stats .grid--1x2 {
+  justify-content: center;
+  align-items: center;
+}
+
+.stats__graph {
+  justify-self: center;
+}
+
+.stats .card {
+  margin: 3vw 10vw;
+}
+
+.stats .card__header {
+  font-size: 4rem;
+}
+
+.stats__text {
+  padding: 2vw;
+}
+
+@media screen and (min-width: 768px) { 
+  .stats .card {
+    margin: 2vw 2vw;
+    font-size: 3rem;
+  }
+
+  .stats__graph {
+    grid-row-start: span 3;
+  }
+}
+
+@media screen and (min-width: 1024px) { 
+  .stats .card {
+    margin: 3vw 5vw;
+    font-size: 3rem;
+  }
+}
+
+
+
+/* Stars */
