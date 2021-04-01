@@ -7,6 +7,10 @@ module.exports = {
     path: path.join(__dirname, 'client/dist'),
     filename: 'bundle.js'
   },
+  devServer: {
+    port: 3000,
+    contentBase: path.join(__dirname, 'client/dist')
+  },
   module: {
     rules: [
         {
@@ -30,6 +34,10 @@ module.exports = {
         {
           test: /\.css$/,
           use: ['style-loader', 'css-loader']
+        },
+        {
+          test: /\.ttf$/,
+          use: ['file-loader']
         }
     ]
   },

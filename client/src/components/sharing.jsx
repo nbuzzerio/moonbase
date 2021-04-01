@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import '../../styles/sharing.css';
-
+import '../styles.css';
 
 function Sharing() {
 

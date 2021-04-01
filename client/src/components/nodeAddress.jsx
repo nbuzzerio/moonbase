@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import '../../styles/nodeAddress.css';
+import '../styles.css';
 
 
 function NodeAddress() {
@@ -13,12 +13,9 @@ function NodeAddress() {
     }
 
     return (
-        <div className='addressCard'>
-            <form className="nodeAddressBox">
-                <label className='addressLabel' htmlFor="nodeAddress">Lease to:</label>
-                <input type="text" id="nodeAddress" value="3Jp9rSY8BCk8DbfDRcqeULNrecWRRP7ShLr" readOnly></input>
-                <button id="copyBtn" onClick={onclick}>Copy</button>
-            </form>
+        <div className="input-group nodeAddress">
+                    <input className='input' type="text" id="nodeAddress" value="3Jp9rSY8BCk8DbfDRcqeULNrecWRRP7ShLr" readOnly></input>
+                    <button className="btn btn--primary" id="copyBtn" onClick={onclick}>Copy</button>
         </div>
     )
 }
