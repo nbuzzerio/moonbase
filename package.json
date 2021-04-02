@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon ./server/server.js",
     "react-dev": "webpack -d --watch",
-    "react-prod": "webpack -p",
+    "react-prod": "webpack -p && node s3_upload.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
+    "aws-sdk": "^2.879.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.1.3",
     "file-loader": "^6.2.0",

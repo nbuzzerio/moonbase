@@ -266,7 +266,7 @@ color: #fff;
     content: "Lease To";
     width: 100vw;
     font-size: 5vw;
-    font-family: SpaceCapsule;
+    font-family: SpaceCapsule, Arial, Helvetica, sans-serif;;
     top: -6vw;
     left: 1vw;
     position: absolute;
@@ -316,7 +316,7 @@ color: #fff;
     left: 2vw;
     position: absolute;
     color: var(--color-headings);
-    text-shadow:  -1px .23vw 1px black,
+    text-shadow:  -1px .2vw 1px black,
                   1px 2px 0.35vw white,
                   1px 18px 6px rgba(16,16,16,0.4),
                   1px 22px 10px rgba(16,16,16,0.2),

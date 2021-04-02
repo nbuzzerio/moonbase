@@ -4,3 +4,6 @@ bundle.js
 
 /images
 *.png
+
+s3_upload.js
+.env
