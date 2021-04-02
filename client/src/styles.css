@@ -19,11 +19,11 @@
 /* Typography */
 @font-face {
     font-family: SpaceFont;
-    src: url(../../images/space-font.ttf);
+    src: url(../dist/space-font.ttf);
 }
 @font-face {
     font-family: SpaceMono;
-    src: url(../../images/SpaceMono-Regular.ttf);
+    src: url(../dist/SpaceMono-Regular.ttf);
 }
 
 html {

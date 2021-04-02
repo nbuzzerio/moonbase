@@ -15,17 +15,17 @@ function App() {
                 <picture>
                     {/* <source 
                         type="image/webp" 
-                        srcSet="../moonbase.png 1x, ../moonbase.png 2x">
+                        srcSet="https://moonbase-demo.s3.amazonaws.com/moonbase.png 1x, ../moonbase.png 2x">
                     </source> */}
                     <source 
                         type="image/png" 
-                        srcSet="../moonbase.png">
+                        srcSet="https://moonbase-demo.s3.amazonaws.com/moonbase.png">
                     </source>
-                    <img className="section__image hero__image" src="../moonbase.png" alt=""></img>
+                    <img className="section__image hero__image" src="https://moonbase-demo.s3.amazonaws.com/moonbase.png" alt=""></img>
                 </picture>
             </section>
             <section className='rates'>
-                <img className="banner" src="./ltomoonbase-banner.png" alt="banner for lto moonbase"/>
+                <img className="banner" src="https://moonbase-demo.s3.amazonaws.com/ltomoonbase-banner.png" alt="banner for lto moonbase"/>
                 <header className="rates__header">
                     <h2>Leasing Information</h2>
                 </header>
@@ -67,8 +67,8 @@ function App() {
                     <article className="stats__graph">
                         <figure>
                             <div style={{width: '50vw', height: '50vw', border: 'solid 1px red', display: 'inline-block'}}>
-                                <img src="./lto-earned.png" alt=""/>
-                                <img src="./blocks-earned.png" alt=""/>
+                                <img src="https://moonbase-demo.s3.amazonaws.com/lto-earned.png" alt=""/>
+                                <img src="https://moonbase-demo.s3.amazonaws.com/blocks-earned.png" alt=""/>
                             </div>
                         </figure>
                     </article>
@@ -97,13 +97,13 @@ function App() {
                 <picture>
                         {/* <source 
                             type="image/webp" 
-                            srcSet="../moonbase.png 1x, ../moonbase.png 2x">
+                            srcSet="https://moonbase-demo.s3.amazonaws.com/moonbase.png 1x, ../moonbase.png 2x">
                         </source> */}
                         <source 
                             type="image/png" 
-                            srcSet="./eclipse.png">
+                            srcSet="https://moonbase-demo.s3.amazonaws.com/eclipse.png">
                         </source>
-                        <img className="section__image" src="./eclipse.png" alt=""></img>
+                        <img className="section__image" src="https://moonbase-demo.s3.amazonaws.com/eclipse.png" alt=""></img>
                 </picture>
             </section>
             <section className="stats">
@@ -181,13 +181,13 @@ function App() {
                 <picture>
                         {/* <source 
                             type="image/webp" 
-                            srcSet="../moonbase.png 1x, ../moonbase.png 2x">
+                            srcSet="https://moonbase-demo.s3.amazonaws.com/moonbase.png 1x, ../moonbase.png 2x">
                         </source> */}
                         <source 
                             type="image/png" 
-                            srcSet="./astronaut.png">
+                            srcSet="https://moonbase-demo.s3.amazonaws.com/astronaut.png">
                         </source>
-                        <img className="section__image social__image" src="./astronaut.png" alt=""></img>
+                        <img className="section__image social__image" src="https://moonbase-demo.s3.amazonaws.com/astronaut.png" alt=""></img>
                 </picture>
             </section>
         </React.Fragment>
