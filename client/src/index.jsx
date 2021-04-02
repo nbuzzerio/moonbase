@@ -24,6 +24,9 @@ function App() {
                     <img className="section__image hero__image" src="https://moonbase-demo.s3.amazonaws.com/moonbase.png" alt=""></img>
                 </picture>
             </section>
+            <div className="tagline">
+                <h2 >LTO MOONBASE IS A QUICKLY GROWING NODE BASED IN THE NYC METROPOLITAN AREA</h2>
+            </div>            
             <section className='rates'>
                 <img className="banner" src="https://moonbase-demo.s3.amazonaws.com/ltomoonbase-banner.png" alt="banner for lto moonbase"/>
                 <header className="rates__header">
