@@ -1,9 +1,6 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
-import '../styles.css';
 
-
-function NodeAddress() {
+export default function NodeAddress() {
 
     function onclick(e) {
         e.preventDefault();
@@ -19,5 +16,3 @@ function NodeAddress() {
         </div>
     )
 }
-
-export default NodeAddress;

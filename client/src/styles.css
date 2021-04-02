@@ -25,6 +25,10 @@
     font-family: SpaceMono;
     src: url(../dist/SpaceMono-Regular.ttf);
 }
+@font-face {
+    font-family: SpaceCapsule;
+    src: url(../dist/capsule-space-font.ttf);
+}
 
 html {
     font-size: 62.5%;
@@ -83,7 +87,7 @@ P {
   }
 
   h1 {
-    font-size: 4.5vw;
+    font-size: 3.5vw;
   }
 
   h2 {
@@ -222,6 +226,8 @@ color: #fff;
   .hero__image {
       width: 100%;
       clip-path: circle(95% at 0 0);
+      -webkit-transform: scaleX(-1) translate(-6vw, 0vw);
+      transform: scaleX(-1) translate(-6vw, 0vw);
   }
 }
 
@@ -260,6 +266,7 @@ color: #fff;
     content: "Lease To";
     width: 100vw;
     font-size: 5vw;
+    font-family: SpaceCapsule;
     top: -6vw;
     left: 1vw;
     position: absolute;
@@ -268,14 +275,14 @@ color: #fff;
 
 @media screen and (min-width: 768px) {
   .hero .input-group {
-    margin-top: 26vw;
+    margin-top: 13vw;
     width: 33vw;
     height: 4vw;
     border: 0;
     background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     align-self: center;
-    margin-right: 63vw;
+    margin-right: -5vw;
   }
 
   .hero .input {
@@ -303,12 +310,18 @@ color: #fff;
 
   .nodeAddress::before {
     content: "Lease To: ";
-    width: 18vw;
-    font-size: 3vw;
-    top: -4vw;
-    left: 1vw;
+    width: 28vw;
+    font-size: 3.5vw;
+    top: -4.5vw;
+    left: 2vw;
     position: absolute;
-    color: var(--color-primary--dark)
+    color: var(--color-headings);
+    text-shadow:  -1px .23vw 1px black,
+                  1px 2px 0.35vw white,
+                  1px 18px 6px rgba(16,16,16,0.4),
+                  1px 22px 10px rgba(16,16,16,0.2),
+                  1px 25px 35px rgba(16,16,16,0.2),
+                  1px 30px 60px rgba(16,16,16,0.4);
   }
 }
 
