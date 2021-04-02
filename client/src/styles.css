@@ -18,8 +18,12 @@
 
 /* Typography */
 @font-face {
-    font-family: spaceFont;
+    font-family: SpaceFont;
     src: url(../../images/space-font.ttf);
+}
+@font-face {
+    font-family: SpaceMono;
+    src: url(../../images/SpaceMono-Regular.ttf);
 }
 
 html {
@@ -28,7 +32,7 @@ html {
 
 body {
     color: var(--color-body);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: SpaceMono, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
     padding: 0; 
@@ -47,7 +51,7 @@ h1 {
     font-size: 8.5vw;
     padding-left: 3vw;
     text-align: start;
-    font-family: spaceFont, Arial, Helvetica, sans-serif;
+    font-family: SpaceFont, Arial, Helvetica, sans-serif;
     text-shadow:    1px 1px 1px #919191,
                     1px 2px 1px #919191,
                     1px 3px 1px #919191,
@@ -107,10 +111,10 @@ P {
   }
   
 .btn .icon {
-width: 2rem;
-height: 2rem;
-margin-right: 1rem;
-vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -172,8 +176,16 @@ color: #fff;
     }
   }
 
+/* Section */
+.section__image {
+  width: 100%;
+  height: 55vw;
+  position: absolute;
+}
+
 /* Hero */
 .hero {
+  padding: 0;
   padding-top: 3.5vw;
   height: 55vw;
   position: relative;
@@ -183,9 +195,6 @@ color: #fff;
 }
 
 .hero__image {
-  width: 100%;
-  height: 55vw;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
@@ -442,6 +451,90 @@ color: #fff;
   }
 }
 
+/* Security */
+.security {
+  position: relative;
+  height: 90vh;
+}
+
+.section__image.security__image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Social */
+.social {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social h2 {
+  font-size: 5vw;
+  margin: 0 2vw;
+  text-shadow:    1px 1px 1px #919191,
+                  1px 2px 1px #919191,
+                  1px 18px 6px rgba(16,16,16,0.4),
+                  1px 22px 10px rgba(16,16,16,0.2),
+                  1px 25px 35px rgba(16,16,16,0.2),
+                  1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.social .social__media {
+  display: flex;
+  width: 100vw;
+  height: 5.5vw;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: flex-end;
+}
+
+.social .list {
+  margin-top: .25vw;
+}
+
+.section__image.social__image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 
 /* Stars */
+
+
+
+/* Lists */
+.list {
+  color: var(--color-headings);
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+/* Icons */
+.icon {
+  width: 5vw;
+  height: 5vw;
+  position: relative;
+}
+
+.icon::before {
+  content: "";
+  width: 50vw;
+  height: 50vw;
+  top: -50px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+}
