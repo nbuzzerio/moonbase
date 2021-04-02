@@ -29,28 +29,31 @@ function App() {
                 <header className="rates__header">
                     <h2>Leasing Information</h2>
                 </header>
-                <div className="rates__info grid grid--1x3">
+                <div className="rates__info grid grid--1x2">
                     <div className="card card--secondary">
-                        <header className="card__header">Title 1</header>
+                        <header className="card__header">Payout</header>
                         <div className="card_body">
                             <p className='rates__text'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            MoonBase Node pays 98% of  earned LTO to it's leasers. Current node fee is 2% to cover server costs. 
                             </p>
                         </div>
                     </div>
                     <div className="card card--secondary">
-                        <header className="card__header">Title 2</header>
+                        <header className="card__header">Payout Schedule</header>
                         <div className="card_body">
                             <p className='rates__text'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Every Saturday MoonBase Node pays out  the LTO it's earned from blocks on the LTO Blockchain
                             </p>
                         </div>
                     </div>
-                    <div className="card card--secondary">
-                        <header className="card__header">Title 3</header>
+                    <div className="card card--primary rates__vip">
+                        <header className="card__header">VIP</header>
                         <div className="card_body">
                             <p className='rates__text'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Tier 1-  Anyone who leases 50,000+ LTO will pay a node fee of 1.75%
+                            </p>
+                            <p className='rates__text'>
+                                Tier 2-  Anyone who leases 100,000+ LTO will pay a node fee of 1.5%
                             </p>
                         </div>
                     </div>
@@ -63,7 +66,10 @@ function App() {
                 <div className="grid grid--1x2">
                     <article className="stats__graph">
                         <figure>
-                            <div style={{width: '50vw', height: '50vw', border: 'solid 1px red', display: 'inline-block'}}></div>
+                            <div style={{width: '50vw', height: '50vw', border: 'solid 1px red', display: 'inline-block'}}>
+                                <img src="./lto-earned.png" alt=""/>
+                                <img src="./blocks-earned.png" alt=""/>
+                            </div>
                         </figure>
                     </article>
                     <aside className="stats__info">

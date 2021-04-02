@@ -390,12 +390,25 @@ color: #fff;
     margin: 3vw 20vw;
     font-size: 3rem;
   }
+
+  .rates__info {
+    grid-template-columns: 1fr
+  }
 }
 
 @media screen and (min-width: 1024px) { 
   .rates .card {
     margin: 3vw 5vw;
     font-size: 3rem;
+  }
+
+  .rates__info {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .rates__vip {
+    grid-column-start: span 2;
+    display: flex;
   }
 }
 
