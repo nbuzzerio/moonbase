@@ -2,33 +2,28 @@ import React from "react";
 
 export default function Stats() {
   return (
-    <React.Fragment>
+    <div className="section__container">
       <header className="stats__header">
         <h2>Node Statistics</h2>
       </header>
-      <div className="grid grid--1x2">
-        <article className="stats__graph">
-          <figure>
-            <div
-              style={{
-                width: "50vw",
-                height: "50vw",
-                border: "solid 1px red",
-                display: "inline-block",
-              }}
-            >
-              <img
-                src="https://moonbase-demo.s3.amazonaws.com/lto-earned.png"
-                alt=""
-              />
-              <img
-                src="https://moonbase-demo.s3.amazonaws.com/blocks-earned.png"
-                alt=""
-              />
-            </div>
+      <div className="grid grid--2x6">
+        <article className="stats__LTO-graph">
+          <figure className="graph__container">
+            <img className="graph"
+              src="https://moonbase-demo.s3.amazonaws.com/lto-earned.png"
+              alt=""
+            />
           </figure>
         </article>
-        <aside className="stats__info">
+        <article className="stats__block-graph">
+          <figure className="graph__container">
+            <img className="graph"
+              src="https://moonbase-demo.s3.amazonaws.com/blocks-earned.png"
+              alt=""
+            />
+          </figure>
+        </article>
+        <aside className="stats__info-A">
           <div className="card card--primary">
             <header className="card__header">Stats Title 1</header>
             <p className="stats__text">
@@ -37,7 +32,7 @@ export default function Stats() {
             </p>
           </div>
         </aside>
-        <aside className="stats__info">
+        <aside className="stats__info-B">
           <div className="card card--primary">
             <header className="card__header">Stats Title 2</header>
             <p className="stats__text">
@@ -46,7 +41,7 @@ export default function Stats() {
             </p>
           </div>
         </aside>
-        <aside className="stats__info">
+        <aside className="stats__info-C">
           <div className="card card--primary">
             <header className="card__header">Stats Title 3</header>
             <p className="stats__text">
@@ -55,6 +50,6 @@ export default function Stats() {
           </div>
         </aside>
       </div>
-    </React.Fragment>
+    </div>
   );
 }

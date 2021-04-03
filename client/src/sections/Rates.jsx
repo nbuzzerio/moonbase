@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Rates() {
   return (
-    <React.Fragment>
+    <div className="section__container">
       <img
         className="banner"
         src="https://moonbase-demo.s3.amazonaws.com/ltomoonbase-banner.png"
@@ -42,6 +42,6 @@ export default function Rates() {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
