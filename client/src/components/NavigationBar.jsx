@@ -1,0 +1,52 @@
+import React from "react";
+
+export default function NavigationBar() {
+  const collapse = (e) => {
+    e.preventDefault();
+    console.log(e.target.parentNode);
+    e.target.parentNode.classList.toggle("collapsible--expanded");
+  };
+
+  return (
+    <React.Fragment>
+      <nav className="nav hero__nav">
+        <a className="nav__logo" href="/">
+          <div className="logo__wrapper">
+            <picture>
+              {/* <source 
+                      type="image/webp" 
+                      srcSet="https://moonbase-demo.s3.amazonaws.com/moonbase.png 1x, ../moonbase.png 2x">
+                  </source> */}
+              <source type="image/png" srcSet="./moonbase-icon.png"></source>
+              <img
+                className="section__image logo__image"
+                src="./moonbase-icon.ico"
+                alt=""
+              ></img>
+            </picture>
+          </div>
+        </a>
+        <svg className="icon nav__toggler" onClick={collapse}>
+          <use href="./sprite.svg#menu"></use>
+        </svg>
+        <ul className="list nav__list collapsible__content">
+          <li className="nav__item">
+            <a href="#">Leasing Rates</a>
+          </li>
+          <li className="nav__item">
+            <a href="#">Node Statistics</a>
+          </li>
+          <li className="nav__item">
+            <a href="#">Node Security</a>
+          </li>
+          <li className="nav__item">
+            <a href="#">About</a>
+          </li>
+          <li className="nav__item">
+            <a href="#">Social Media</a>
+          </li>
+        </ul>
+      </nav>
+    </React.Fragment>
+  );
+}

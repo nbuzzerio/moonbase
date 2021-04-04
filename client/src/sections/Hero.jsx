@@ -1,9 +1,11 @@
 import React from "react";
 import NodeAddress from "../components/NodeAddress.jsx";
+import NavigationBar from "../components/NavigationBar.jsx";
 
 export default function Hero() {
   return (
     <React.Fragment>
+      <NavigationBar />
       <h1>LTO MOONBASE NODE</h1>
       <NodeAddress />
       <picture>
@@ -21,6 +23,7 @@ export default function Hero() {
           alt=""
         ></img>
       </picture>
+
     </React.Fragment>
   );
 }
