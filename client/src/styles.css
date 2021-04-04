@@ -222,7 +222,7 @@ color: #fff;
 /* Banner */
 .banner {
   display: block;
-  margin: 0 auto 3vw;
+  margin: 3vw auto -7vw;
   max-width: 90%;
   height: auto;
   border-radius: 25px;
@@ -257,7 +257,7 @@ color: #fff;
 .hero {
   padding: 0;
   padding-top: 3.5vw;
-  height: 55vw;
+  height: 95vw;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -291,13 +291,14 @@ color: #fff;
 
 /* Address Input */
 .hero .input-group {
-    margin-top: 6vw;
+    margin-top: 30vw;
     width: 85vw;
     height: 8vw;
     border: 0;
     background-color: rgba(16,16,16,0.2);
     align-self: end;
     position: relative;
+    margin-left: 8vw;
 }
 
 .hero .input {
@@ -321,8 +322,8 @@ color: #fff;
 }
 
 .nodeAddress::before {
-    content: "Lease To";
-    width: 100vw;
+    content: "Lease To:";
+    width: 50vw;
     font-size: 5vw;
     font-family: SpaceCapsule, Arial, Helvetica, sans-serif;;
     top: -6vw;
@@ -341,6 +342,7 @@ color: #fff;
     position: relative;
     align-self: center;
     margin-right: -5vw;
+    margin-left: 0;
   }
 
   .hero .input {
@@ -400,7 +402,7 @@ color: #fff;
 /* Rates */
 .rates {
   background-color: black;
-  padding: 10vw;
+  padding: 4vw;
 }
 
 .rates .rates__header {
@@ -412,7 +414,7 @@ color: #fff;
 }
 
 .rates .card {
-  margin: 4vw 15vw;
+  margin: 4vw 0;
   font-size: 2rem;
 }
 
@@ -457,7 +459,7 @@ color: #fff;
 
 /* Stats */
 .stats {
-  padding-top: 10vw;
+  padding-top: 5vw;
 }
 
 .graph__container {
@@ -474,7 +476,7 @@ color: #fff;
 }
 
 .stats .card {
-  margin: 3vw 10vw;
+  margin: 3vw;
 }
 
 .stats .card__header {
