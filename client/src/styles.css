@@ -70,7 +70,7 @@ h1 {
 }
   
 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h3 {
@@ -91,7 +91,7 @@ P {
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 8rem;
   }
 
   h3 {
@@ -563,7 +563,6 @@ color: #fff;
   padding-bottom: 1vw;
 }
 .rates .rates__header>h2 {
-  font-size: 3rem;
   padding-top: 4vw;
 }
 
@@ -583,7 +582,6 @@ color: #fff;
 
 @media screen and (min-width: 768px) { 
   .rates .rates__header>h2 {
-    font-size: 8rem;
     padding-top: 0vw;
   }
 
@@ -635,10 +633,7 @@ color: #fff;
 
 .stats .stats__header {
   text-align: center;
-  padding-bottom: 2vw;
-}
-.stats .stats__header>h2 {
-  font-size: 7rem;
+  padding-bottom: 1vw;
 }
 
 .stats .card {
@@ -646,11 +641,13 @@ color: #fff;
 }
 
 .stats .card__header {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .stats__text {
   padding: 2vw;
+  margin: 0 2vw;
+  font-size: 1.3rem;
 }
 
 .graph {
@@ -664,6 +661,12 @@ color: #fff;
   }
   .stats .card__header {
     font-size: 3rem;
+  }
+
+  .stats__text {
+    padding: 1vw;
+    margin: 0;
+    font-size: 2rem;
   }
 
   .graph {

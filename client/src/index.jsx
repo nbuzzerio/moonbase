@@ -18,7 +18,7 @@ function App() {
                 <Rates />
             </section>
             <section className="stats" id="stats">
-                {/* <Stats /> */}
+                <Stats />
             </section>
             <section className="security" id="security">
                 <Security />
