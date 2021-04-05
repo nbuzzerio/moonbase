@@ -3,7 +3,6 @@ import React from "react";
 export default function Security() {
   return (
     <React.Fragment>
-      <div>CONTENT GOES HERE</div>
       <picture>
         {/* <source 
                             type="image/webp" 

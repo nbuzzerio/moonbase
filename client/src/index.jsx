@@ -14,20 +14,17 @@ function App() {
             <section className='hero' id="hero">
                <Hero />
             </section>
-            <div className="tagline">
-                <h2 >LTO MOONBASE IS A QUICKLY GROWING NODE BASED IN THE NYC METROPOLITAN AREA</h2>
-            </div>            
-            <section className='rates'>
+            <section className='rates' id="rates">
                 <Rates />
             </section>
             <section className="stats" id="stats">
-                <Stats />
+                {/* <Stats /> */}
             </section>
             <section className="security" id="security">
                 <Security />
             </section>
             <section className="stats" id="about">
-                <Stats />
+                {/* <Stats /> */}
             </section>
             <section className="social" id="social">
                 <Social />

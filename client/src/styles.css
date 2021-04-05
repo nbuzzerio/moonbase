@@ -207,7 +207,7 @@ color: #fff;
 }
 
 .card__header, .card__body {
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
 }
 
 .card--primary .card__header {
@@ -348,7 +348,7 @@ color: #fff;
 .hero {
   padding: 0;
   padding-top: 3.5vw;
-  height: 95vw;
+  height: 95vh;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -371,10 +371,18 @@ color: #fff;
 }
 
 .hero__image {
-  top: 0;
+  /* top: 0;
   left: 0;
   z-index: -1;
   clip-path: circle(77% at 0 0);
+  -webkit-transform: scaleX(-1) translate(-4vw, 8vw);
+  transform: scaleX(-1) translate(-4vw, 8vw); */
+
+  width: 130vh;
+  top: 0;
+  left: -45vh;
+  z-index: -1;
+  clip-path: circle(73% at 30% 1%);
   -webkit-transform: scaleX(-1) translate(-4vw, 8vw);
   transform: scaleX(-1) translate(-4vw, 8vw);
 }
@@ -387,6 +395,10 @@ color: #fff;
   padding-bottom: 2vw;
 }
 
+.hero>h2 {
+  margin-top: 5vh;
+}
+
 
 @media screen and (min-width: 768px) {
   .hero {
@@ -395,10 +407,14 @@ color: #fff;
       margin-top: -3vw;
   }
 
+  .hero>h2 {
+    margin-top: 0;
+  }
+
   .logo__image {
     position: absolute;
     width: 3.5vw;
-    right: 65vw;
+    right: 92vw;
     top: 1.75vw;
   }
 
@@ -419,6 +435,7 @@ color: #fff;
     
   .hero__image {
       width: 100%;
+      left: 0;
       clip-path: circle(95% at 0 0);
       -webkit-transform: scaleX(-1) translate(-6vw, 0vw);
       transform: scaleX(-1) translate(-6vw, 3vw);
@@ -427,7 +444,7 @@ color: #fff;
 
 /* Address Input */
 .hero .input-group {
-    margin-top: 30vw;
+    margin-top: 62vh;
     width: 85vw;
     height: 8vw;
     border: 0;
@@ -546,23 +563,36 @@ color: #fff;
   padding-bottom: 1vw;
 }
 .rates .rates__header>h2 {
-  font-size: 5rem;
+  font-size: 3rem;
+  padding-top: 4vw;
 }
 
 .rates .card {
   margin: 4vw 0;
-  font-size: 2rem;
 }
 
 .rates .card__header {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .rates__text {
   padding: 2vw;
+  margin: 0 2vw;
+  font-size: 1.3rem;
 }
 
 @media screen and (min-width: 768px) { 
+  .rates .rates__header>h2 {
+    font-size: 8rem;
+    padding-top: 0vw;
+  }
+
+  .rates__text {
+    padding: 1vw;
+    margin: 0;
+    font-size: 2rem;
+  }
+
   .rates .card {
     margin: 3vw 10vw;
   }
