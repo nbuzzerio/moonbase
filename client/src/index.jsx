@@ -11,7 +11,7 @@ import Social from './sections/Social.jsx';
 function App() {
     return (
         <React.Fragment>
-            <section className='hero'>
+            <section className='hero' id="hero">
                <Hero />
             </section>
             <div className="tagline">
@@ -20,16 +20,16 @@ function App() {
             <section className='rates'>
                 <Rates />
             </section>
-            <section className="stats">
+            <section className="stats" id="stats">
                 <Stats />
             </section>
-            <section className="security">
+            <section className="security" id="security">
                 <Security />
             </section>
-            <section className="stats">
+            <section className="stats" id="about">
                 <Stats />
             </section>
-            <section className="social">
+            <section className="social" id="social">
                 <Social />
             </section>
         </React.Fragment>

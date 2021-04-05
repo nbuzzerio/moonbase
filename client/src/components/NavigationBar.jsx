@@ -31,19 +31,19 @@ export default function NavigationBar() {
         </svg>
         <ul className="list nav__list collapsible__content">
           <li className="nav__item">
-            <a href="#">Leasing Rates</a>
+            <a href="#rates">Leasing Rates</a>
           </li>
           <li className="nav__item">
-            <a href="#">Node Statistics</a>
+            <a href="#stats">Node Statistics</a>
           </li>
           <li className="nav__item">
-            <a href="#">Node Security</a>
+            <a href="#security">Node Security</a>
           </li>
           <li className="nav__item">
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="nav__item">
-            <a href="#">Social Media</a>
+            <a href="#social">Social Media</a>
           </li>
         </ul>
       </nav>

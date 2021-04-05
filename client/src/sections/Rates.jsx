@@ -8,7 +8,7 @@ export default function Rates() {
         src="https://moonbase-demo.s3.amazonaws.com/ltomoonbase-banner.png"
         alt="banner for lto moonbase"
       />
-      <header className="rates__header">
+      <header className="rates__header" id="rates">
         <h2>Leasing Information</h2>
       </header>
       <div className="rates__info grid grid--1x2">
