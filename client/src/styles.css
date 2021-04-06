@@ -79,6 +79,7 @@ h3 {
 
 P {
     margin: 0;
+    font-size: 1.3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -96,6 +97,10 @@ P {
 
   h3 {
     font-size: 2.4rem;
+  }
+
+  p {
+    font-size: 2rem;
   }
 }
 
@@ -192,6 +197,10 @@ color: #fff;
 @media screen and (min-width: 1024px) { 
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .grid--2x2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
   }
   .grid--2x6 {
     grid-template-columns: repeat(6, 1fr);
@@ -342,6 +351,34 @@ color: #fff;
     border: 0;
     background-color: black;
   }
+}
+
+/* Lists */
+.list {
+  color: var(--color-headings);
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+/* Icons */
+.icon {
+  width: 5vw;
+  height: 5vw;
+  position: relative;
+}
+
+.icon::before {
+  content: "";
+  width: 50vw;
+  height: 50vw;
+  top: -50px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 /* Hero */
@@ -577,7 +614,6 @@ color: #fff;
 .rates__text {
   padding: 2vw;
   margin: 0 2vw;
-  font-size: 1.3rem;
 }
 
 @media screen and (min-width: 768px) { 
@@ -588,7 +624,6 @@ color: #fff;
   .rates__text {
     padding: 1vw;
     margin: 0;
-    font-size: 2rem;
   }
 
   .rates .card {
@@ -647,7 +682,6 @@ color: #fff;
 .stats__text {
   padding: 2vw;
   margin: 0 2vw;
-  font-size: 1.3rem;
 }
 
 .graph {
@@ -660,13 +694,12 @@ color: #fff;
     font-size: 2rem;
   }
   .stats .card__header {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 
   .stats__text {
     padding: 1vw;
     margin: 0;
-    font-size: 2rem;
   }
 
   .graph {
@@ -721,7 +754,7 @@ color: #fff;
 /* Security */
 .security {
   position: relative;
-  height: 90vh;
+  height: 50vw;
 }
 
 .section__image.security__image {
@@ -731,6 +764,92 @@ color: #fff;
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+/* About */
+.about__header {
+  text-align: center;
+  padding-bottom: 1vw;
+}
+
+.mission {
+  padding: 3vw;
+  text-align: left;
+  text-indent: 2rem;
+}
+
+.member {
+  padding: 2vw 0;
+  background-color: rgba(16,16,16,0.2);
+}
+
+.about__member-name {
+  margin: 0;
+  font-size: 2.2rem;
+  text-decoration: underline;
+}
+
+.about__member-img {
+  width: 45%;
+  height: 45%;
+  padding: 3vw;
+}
+
+.about__member-info {
+  padding: 3vw;
+  font-size: 1rem;
+}
+
+.about__member-name {
+  text-align: center;
+}
+
+.about__member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__left .about__member {
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 768px) {
+  .mission {
+    text-indent: 5rem;
+    padding: 0 5vw;
+  }
+  
+  .about__member-name {
+    margin: 0;
+    text-align: right;
+    padding: 0 3vw;
+  }
+  
+  .about__left .about__member-name {
+    margin: 0;
+    text-align: left;
+  }
+  
+  .about__member-img {
+    width: 35%;
+    height: 35%;
+    padding: 1vw;
+  }
+  
+  .about__member-info {
+    padding: 1vw;
+    font-size: 1.15rem;
+  }
+  
+  .about__member {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .about__left .about__member {
+    flex-direction: row;
+  }
 }
 
 /* Social */
@@ -755,13 +874,13 @@ color: #fff;
 .social .social__media {
   display: flex;
   width: 100vw;
-  height: 5.5vw;
+  height: 6.5vw;
   background: rgba(0, 0, 0, 0.8);
   justify-content: flex-end;
 }
 
 .social .list {
-  margin-top: .25vw;
+  margin-top: -2vw;
 }
 
 .section__image.social__image {
@@ -773,35 +892,12 @@ color: #fff;
   z-index: -1;
 }
 
+@media screen and (min-width: 786px) {
+  .social .social__media {
+    height: 5.5vw;
+  }
 
-/* Stars */
-
-
-
-/* Lists */
-.list {
-  color: var(--color-headings);
-  list-style: none;
-  padding-left: 0;
-}
-
-.list--inline .list__item {
-  display: inline-block;
-  margin-right: 2rem;
-}
-
-/* Icons */
-.icon {
-  width: 5vw;
-  height: 5vw;
-  position: relative;
-}
-
-.icon::before {
-  content: "";
-  width: 50vw;
-  height: 50vw;
-  top: -50px;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.9);
+  .social .list {
+    margin-top: .25vw;
+  }
 }

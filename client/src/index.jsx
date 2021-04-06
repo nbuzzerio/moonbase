@@ -6,6 +6,7 @@ import Hero from './sections/Hero.jsx';
 import Rates from './sections/Rates.jsx';
 import Stats from './sections/Stats.jsx';
 import Security from './sections/Security.jsx';
+import About from './sections/About.jsx';
 import Social from './sections/Social.jsx';
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
                 <Security />
             </section>
             <section className="stats" id="about">
-                {/* <Stats /> */}
+                <About />
             </section>
             <section className="social" id="social">
                 <Social />

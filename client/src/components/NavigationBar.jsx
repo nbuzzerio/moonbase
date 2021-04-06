@@ -17,10 +17,10 @@ export default function NavigationBar() {
                       type="image/webp" 
                       srcSet="https://moonbase-demo.s3.amazonaws.com/moonbase.png 1x, ../moonbase.png 2x">
                   </source> */}
-              <source type="image/png" srcSet="./moonbase-icon.png"></source>
+              <source type="image/png" srcSet="https://moonbase-demo.s3.amazonaws.com/moonbase-icon.png"></source>
               <img
                 className="section__image logo__image"
-                src="./moonbase-icon.ico"
+                src="https://moonbase-demo.s3.amazonaws.com/moonbase-icon.png"
                 alt=""
               ></img>
             </picture>
