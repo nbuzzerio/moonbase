@@ -771,18 +771,42 @@ color: #fff;
 
 /* Security */
 .security {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 5vw 0;
+}
+
+.security .security__header {
+  text-align: center;
+  padding-bottom: 1vw;
+}
+
+.security .card {
+  margin: 3vw;
+}
+
+.security .card__header {
+  font-size: 2rem;
+}
+
+.security__text {
+  padding: 2vw;
+  margin: 0 2vw;
+}
+
+@media screen and (min-width: 768px) { 
+  .security__text {
+    padding: 1vw;
+    margin: 0;
+  }
 }
 
 /* About */
 .about {
-  background-color: black;
-  padding: 5vw 0;
-}
-
-.about {
   display: flex;
   justify-content: center;
+  background-color: black;
+  padding: 5vw 0;
 }
 
 .about .card {
