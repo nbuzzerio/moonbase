@@ -10,7 +10,7 @@ export default function Stats() {
         <article className="stats__LTO-graph">
           <figure className="graph__container">
             <img className="graph"
-              src="https://moonbase-demo.s3.amazonaws.com/lto-earned.png"
+              src="https://moonbase-demo.s3.amazonaws.com/ltoearned.png"
               alt=""
             />
           </figure>
@@ -18,7 +18,7 @@ export default function Stats() {
         <article className="stats__block-graph">
           <figure className="graph__container">
             <img className="graph"
-              src="https://moonbase-demo.s3.amazonaws.com/blocks-earned.png"
+              src="https://moonbase-demo.s3.amazonaws.com/nodeperformance.png"
               alt=""
             />
           </figure>
@@ -27,7 +27,8 @@ export default function Stats() {
           <div className="card card--primary">
             <header className="card__header">Blocks Earned</header>
             <p className="stats__text">
-              
+              Week of 3/28 - 4/3 <br></br>
+              LTO Moonbase minted 31 blocks on the LTO Blockchain
             </p>
           </div>
         </aside>
@@ -35,7 +36,8 @@ export default function Stats() {
           <div className="card card--primary">
             <header className="card__header">Verified Transactions</header>
             <p className="stats__text">
-             
+              Week of 3/28 - 4/3 <br></br>
+              LTO Moonbase verified 2165 transactions on the LTO Blockchain
             </p>
           </div>
         </aside>
@@ -43,7 +45,8 @@ export default function Stats() {
           <div className="card card--primary">
             <header className="card__header">LTO Earned</header>
             <p className="stats__text">
-              
+              Week of 3/28 - 4/3 <br></br>
+              LTO Moonbase earned 503 LTO in transactions for its leasers
             </p>
           </div>
         </aside>

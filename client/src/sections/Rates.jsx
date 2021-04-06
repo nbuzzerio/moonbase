@@ -31,7 +31,10 @@ export default function Rates() {
           </div>
         </div>
         <div className="card card--primary rates__vip">
-          <header className="card__header">VIP</header>
+          <header className="card__header">
+            <br/>
+            VIP
+          </header>
           <div className="card_body">
             <p className="rates__text">
               Tier 1- Anyone who leases 50,000+ LTO will pay a node fee of 1.75%

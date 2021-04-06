@@ -36,9 +36,9 @@ export default function NavigationBar() {
           <li className="nav__item">
             <a href="#stats">Node Statistics</a>
           </li>
-          {/* <li className="nav__item">
+          <li className="nav__item">
             <a href="#security">Node Security</a>
-          </li> */}
+          </li>
           <li className="nav__item">
             <a href="#about">About Us</a>
           </li>

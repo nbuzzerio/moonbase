@@ -16,7 +16,7 @@ export default function Social() {
             </a>
           </li>
           <li className="list__item">
-            <a href="" target="_blank">
+            <a href="">
               <span className="icon-container">
                 <svg className="icon">
                   <use href="./sprite.svg#logo-linkedin"></use>
@@ -25,7 +25,7 @@ export default function Social() {
             </a>
           </li>
           <li className="list__item">
-            <a href="" target="_blank">
+            <a href="">
               <span className="icon-container">
                 <svg className="icon">
                   <use href="./sprite.svg#logo-facebook"></use>
@@ -34,7 +34,7 @@ export default function Social() {
             </a>
           </li>
           <li className="list__item">
-            <a href="" target="_blank">
+            <a href="">
               <span className="icon-container">
                 <svg className="icon">
                   <use href="./sprite.svg#logo-discord"></use>

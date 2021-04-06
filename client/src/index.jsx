@@ -5,6 +5,7 @@ import './styles.css';
 import Hero from './sections/Hero.jsx';
 import Rates from './sections/Rates.jsx';
 import Stats from './sections/Stats.jsx';
+import LTOPrice from './sections/LTOPrice.jsx';
 import Security from './sections/Security.jsx';
 import About from './sections/About.jsx';
 import Social from './sections/Social.jsx';
@@ -21,10 +22,13 @@ function App() {
             <section className="stats" id="stats">
                 <Stats />
             </section>
-            <section className="security" id="security">
+            <section className="lto-price" id="LTOPrice">
+                <LTOPrice />
+            </section>
+            <section className="security stats" id="security">
                 <Security />
             </section>
-            <section className="stats" id="about">
+            <section className="about stats" id="about">
                 <About />
             </section>
             <section className="social" id="social">
