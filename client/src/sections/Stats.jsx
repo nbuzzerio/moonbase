@@ -25,27 +25,25 @@ export default function Stats() {
         </article>
         <aside className="stats__info-A">
           <div className="card card--primary">
-            <header className="card__header">Stats Title 1</header>
+            <header className="card__header">Blocks Earned</header>
             <p className="stats__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
-              aperiam.
+              
             </p>
           </div>
         </aside>
         <aside className="stats__info-B">
           <div className="card card--primary">
-            <header className="card__header">Stats Title 2</header>
+            <header className="card__header">Verified Transactions</header>
             <p className="stats__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione,
-              pariatur?
+             
             </p>
           </div>
         </aside>
         <aside className="stats__info-C">
           <div className="card card--primary">
-            <header className="card__header">Stats Title 3</header>
+            <header className="card__header">LTO Earned</header>
             <p className="stats__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a.
+              
             </p>
           </div>
         </aside>

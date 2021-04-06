@@ -7,8 +7,7 @@ export default function About() {
         <h2>About Us</h2>
         <article className="mission">
           <p>
-            LTO Moonbase Node...
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil impedit tempore voluptate, libero ut accusantium nesciunt sed nostrum, nulla itaque aperiam quas autem similique, optio dolore sit assumenda iste quidem! Voluptate doloribus harum velit ipsum debitis! Culpa at beatae deserunt.
+
           </p>
         </article>
       </header>
@@ -24,7 +23,7 @@ export default function About() {
               tournaments both at the state and national level. Thomas
               cultivates new business partnerships and oversees daily business
               operations for the MoonBase Node. For any Node or LTO questions,
-              updates, suggestions please don’t hesitate to reach out
+              updates, suggestions please don’t hesitate to reach out.
             </p>
             <img
               src="https://moonbase-demo.s3.amazonaws.com/staff1.png"
@@ -49,7 +48,7 @@ export default function About() {
               with several certifications, specializes in active SOC threat
               detection/engineering and is always working on his penetration
               testing skills. Zak built MoonBase Node with all its security
-              features live threat detection. Any security questions or
+              features and live threat detection. Any security questions or
               suggestions please reach out; Zak can talk security for hours.
             </p>
           </div>
@@ -86,12 +85,7 @@ export default function About() {
               className="about__member-img"
             />
             <p className="about__member-info">
-              Nicholas Is a full-stack software engineer with a strong
-              background in JavaScript. He is certified in NodeJS, React, Redux,
-              Socket.io, and PostgreSQL. Nicholas is the man when it comes to
-              all things development for the MoonBase Node. He is always looking
-              for new found efficiencies. Please contact him for project
-              updates, suggestions or software partnerships.
+              Nicholas is a full-stack software engineer with a strong background in JavaScript. He is currently pursuing a Master’s in Data Science. Nicholas is the man when it comes to all things development for the MoonBase Node. He is always looking for newfound optimizations and efficiencies. Please contact him for project updates, suggestions, or software partnerships.
             </p>
           </div>
         </article>

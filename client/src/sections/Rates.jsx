@@ -16,7 +16,7 @@ export default function Rates() {
           <header className="card__header">Payout</header>
           <div className="card_body">
             <p className="rates__text">
-              MoonBase Node pays 98% of earned LTO to it's leasers. Current node
+              MoonBase Node pays 98% of earned LTO to its leasers. Current node
               fee is 2% to cover server costs.
             </p>
           </div>
@@ -26,7 +26,7 @@ export default function Rates() {
           <div className="card_body">
             <p className="rates__text">
               Every Saturday MoonBase Node pays out the LTO it's earned from
-              blocks on the LTO Blockchain
+              blocks on the LTO Blockchain.
             </p>
           </div>
         </div>
