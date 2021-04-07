@@ -1,6 +1,40 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import getBlockData from '../_getBlockData'
+import getNodeData from '../_getNodeData'
 
 export default function Stats() {
+  const [nodeData, setNodeData] = useState(null);
+  const [blockData, setBlockData] = useState(null);
+  const [weekStart, setWeekStart] = useState(null);
+  const [weekEnd, setWeekEnd] = useState(null);
+
+  useEffect(() => {
+
+    setWeekEnd(Date.now() - ( 86400000 * new Date().getDay() ));
+    setWeekStart(weekEnd - 604800000);
+
+      let mounted = true;
+      getBlockData()
+          .then(data => {
+            setBlockData(data);
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+      getNodeData()
+          .then(data => {
+            setNodeData(data[0].slice(790));
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+
+      return () => {
+          mounted = false;
+      }
+  }, [])
+
+
   return (
     <div className="section__container">
       <header className="stats__header">
