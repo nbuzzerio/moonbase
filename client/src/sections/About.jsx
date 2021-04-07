@@ -7,7 +7,7 @@ export default function About() {
         <h2>About Us</h2>
         <article className="mission">
           <p>
-
+            The Moonbase team is dedicated to securing transactions in different blockchains by creating independent nodes for individuals and companies interested in leasing their cryptocurrencies. We believe in decentralization and proof of stake as it allows individuals the autonomy and option to stake their coins and gain rewards. Our team is made up of engineers, educators, and entrepreneurs. Together, we’re working to broaden people’s knowledge on the world of cryptocurrency and creating nodes to allow individuals to participate in consensus from anywhere in the world.
           </p>
         </article>
       </header>

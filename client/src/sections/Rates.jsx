@@ -30,7 +30,7 @@ export default function Rates() {
             </p>
           </div>
         </div>
-        <div className="card card--primary rates__vip">
+        <div className="card card--secondary rates__vip">
           <header className="card__header">
             <br/>
             VIP

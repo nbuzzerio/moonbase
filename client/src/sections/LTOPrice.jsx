@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Security() {
+export default function LTOPrice() {
   return (
     <React.Fragment>
       <picture>
