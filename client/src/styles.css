@@ -663,9 +663,14 @@ color: #fff;
   padding: 5vw 0;
 }
 
-.graph__container {
+.chart {
+  max-width: 80%;
+}
+
+.stats .graph__container {
   display: flex;
   justify-content: center;
+  margin-left: -5vw;
 }
 
 .stats .stats__header {
@@ -691,6 +696,15 @@ color: #fff;
 }
 
 @media screen and (min-width: 768px) { 
+  .chart {
+    max-width: 100%;
+  }
+
+  .graph__container {
+    margin-left: 0vw;
+  }
+  
+
   .stats .card {
     margin: 2vw 10vw;
     font-size: 2rem;
@@ -774,6 +788,11 @@ color: #fff;
   display: flex;
   justify-content: center;
   padding: 5vw 0;
+}
+
+.security .graph__container {
+  display: flex;
+  justify-content: center;
 }
 
 .security .security__header {
