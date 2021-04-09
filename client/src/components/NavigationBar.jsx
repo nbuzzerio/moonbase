@@ -31,6 +31,9 @@ export default function NavigationBar() {
         </svg>
         <ul className="list nav__list collapsible__content">
           <li className="nav__item">
+            <a href="https://www.youtube.com/watch?v=J03yYFxkVV8" target="_blank">How to Lease</a>
+          </li>
+          <li className="nav__item">
             <a href="#rates">Leasing Rates</a>
           </li>
           <li className="nav__item">

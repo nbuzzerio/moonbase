@@ -25,10 +25,11 @@ export default function Social() {
             </a>
           </li>
           <li className="list__item">
-            <a href="">
+            <a href="https://www.youtube.com/channel/UC3W2BBTfNc8Lv7Mj8BFaxUg"
+            target="_blank">
               <span className="icon-container">
                 <svg className="icon">
-                  <use href="./sprite.svg#logo-facebook"></use>
+                  <use href="./sprite.svg#logo-youtube"></use>
                 </svg>
               </span>
             </a>
