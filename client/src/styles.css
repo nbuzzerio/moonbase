@@ -244,25 +244,6 @@ color: #fff;
   }
 }
 
-/* Section */
-.section__image {
-  width: 100%;
-  position: absolute;
-}
-
-@media screen and (min-width: 768px) {
-  .section__image {
-    width: 100%;
-    position: absolute;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .section__container {
-    max-width: 1200px;
-  }
-}
-
 /* collapsibles */
 .collapsible__header {
   display: flex; 
@@ -409,13 +390,6 @@ color: #fff;
 }
 
 .hero__image {
-  /* top: 0;
-  left: 0;
-  z-index: -1;
-  clip-path: circle(77% at 0 0);
-  -webkit-transform: scaleX(-1) translate(-4vw, 8vw);
-  transform: scaleX(-1) translate(-4vw, 8vw); */
-
   width: 130vh;
   top: 0;
   left: -45vh;
@@ -590,11 +564,42 @@ color: #fff;
   font-size: 2vw;
 }
 
+/* Section */
+.section__image {
+  width: 100%;
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .section__image {
+    width: 100%;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section__container {
+    max-width: 1200px;
+  }
+}
+
 /* Stars */
 section.space {
   position: relative;
   z-index: -10;
   background-color: black;
+  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+  padding: 10vw 0;
+}
+
+section.space.top {
+  clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+  padding: 5vw 0 10vw;
+}
+
+section.space.bottom {
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  padding: 10vw 0 5vw;
 }
 
 .space .card {
@@ -604,7 +609,6 @@ section.space {
 /* Rates */
 .rates {
   background-color: black;
-  padding: 4vw;
 }
 
 .rates .rates__header {
@@ -670,10 +674,6 @@ section.space {
 }
 
 /* Stats */
-.stats {
-  padding: 5vw 0;
-}
-
 .chart {
   max-width: 80%;
 }
@@ -800,14 +800,14 @@ section.space {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  clip-path: inset(1% 20% 3% 23% round 100%);
+  z-index: -3;
 }
 
 /* Security */
 .security {
   display: flex;
   justify-content: center;
-  padding: 5vw 0;
 }
 
 .security .graph__container {
@@ -845,7 +845,6 @@ section.space {
   display: flex;
   justify-content: center;
   background-color: black;
-  padding: 5vw 0;
 }
 
 .about .card {

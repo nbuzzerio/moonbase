@@ -17,23 +17,23 @@ function App() {
             <section className='hero' id="hero">
                <Hero />
             </section>
-            <section className='rates space' id="rates">
-                {stars()}
+            <section className='rates space top' id="rates">
                 <Rates />
+                {stars()}
             </section>
             <section className="stats" id="stats">
                 <Stats />
             </section>
             <section className="lto-price space" id="LTOPrice">
-                {stars()}
                 <LTOPrice />
+                {stars()}
             </section>
             <section className="security" id="security">
                 <Security />
             </section>
-            <section className="about space" id="about">
-                {stars()}
+            <section className="about space bottom" id="about">
                 <About />
+                {stars()}
             </section>
             <section className="social" id="social">
                 <Social />

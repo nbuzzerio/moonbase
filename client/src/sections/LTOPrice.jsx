@@ -13,7 +13,7 @@ export default function LTOPrice() {
           srcSet="https://moonbase-demo.s3.amazonaws.com/eclipse.png"
         ></source>
         <img
-          className="section__image"
+          className="section__image lto-price__image"
           src="https://moonbase-demo.s3.amazonaws.com/eclipse.png"
           alt=""
         ></img>
