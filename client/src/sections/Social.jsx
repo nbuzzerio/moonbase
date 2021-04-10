@@ -16,7 +16,7 @@ export default function Social() {
             </a>
           </li>
           <li className="list__item">
-            <a href="">
+            <a href="https://www.linkedin.com/company/lto-moonbase-node/" target="_blank">
               <span className="icon-container">
                 <svg className="icon">
                   <use href="./sprite.svg#logo-linkedin"></use>

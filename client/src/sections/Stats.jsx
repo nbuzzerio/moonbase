@@ -1,9 +1,10 @@
 import React, { useEffect, useReducer } from "react";
 import getBlockData from "../apiRequests/_getBlockData";
 import getNodeData from "../apiRequests/_getNodeData";
-import { Bar, Line, defaults } from "react-chartjs-2";
+import { Bar, Line, defaults, Radar, Bubble, Polar, HorizontalBar} from "react-chartjs-2";
 
 import filterBlocksEarned from "../helper/filterBlocksEarned.jsx";
+// import filterNodeTransactions from "../helper/filterNodeTransactions.jsx";
 
 export default function Stats() {
   const ACTIONS = {
@@ -15,6 +16,14 @@ export default function Stats() {
     SET_BAR_DATA_BOOL: "set-bar-bool",
     SET_WEEK_BLOCKS_CHART: "set-week-blocks-chart",
     SET_WEEK_BLOCKS_TOTAL: "set-week-blocks-total",
+
+    SET_LINE_DATA_BOOL: "set-line-data-bool",
+    SET_WEEK_TXS_CHART: "set-week-txs-chart",
+    SET_WEEK_TXS_TOTAL: "set-week-txs-total",
+    SET_WEEK_FEES_TOTAL: "set-week-fees-total",
+    
+    SET_LAST_WEEK_TXS_TOTAL: "set-last-week-txs-total",
+    SET_LAST_WEEK_FEES_TOTAL: "set-last-week-fees-total",
   };
 
   function reducer(state, action) {
@@ -35,6 +44,21 @@ export default function Stats() {
         return { ...state, weekBlocksChart: action.payload.weekBlocksChart };
       case ACTIONS.SET_WEEK_BLOCKS_TOTAL:
         return { ...state, weekBlocksTotal: action.payload.weekBlocksTotal };
+
+      case ACTIONS.SET_LINE_DATA_BOOL:
+        return { ...state, lineDataBool: action.payload.lineDataBool };
+      case ACTIONS.SET_WEEK_TXS_CHART:
+        return { ...state, weekTxsChart: action.payload.weekTxsChart };
+      case ACTIONS.SET_WEEK_TXS_TOTAL:
+        return { ...state, weekTxsTotal: action.payload.weekTxsTotal };
+      case ACTIONS.SET_WEEK_FEES_TOTAL:
+        return { ...state, weekFeesTotal: action.payload.weekFeesTotal };
+
+      case ACTIONS.SET_LAST_WEEK_TXS_TOTAL:
+        return { ...state, lastWeekTxsTotal: action.payload.lastWeekTxsTotal };
+      case ACTIONS.SET_LAST_WEEK_FEES_TOTAL:
+        return { ...state, lastWeekFeesTotal: action.payload.lastWeekFeesTotal };
+
       default:
         return state;
     }
@@ -49,6 +73,14 @@ export default function Stats() {
     barDataBool: false,
     weekBlocksChart: blocksChart,
     weekBlocksTotal: 0,
+
+    lineDataBool: false,
+    weekTxsChart: blocksChart,
+    weekTxsTotal: 0,
+    weekFeesTotal: 0,
+
+    lastWeekTxsTotal: 0,
+    lastWeekFeesTotal: 0,
   });
 
   useEffect(() => {
@@ -85,10 +117,7 @@ export default function Stats() {
 
   filterBlocksEarned(state, dispatch, ACTIONS);
 
-  (defaults.global.defaultFontFamily = "SpaceMono"),
-    "Arial",
-    "Helvetica",
-    "sans-serif";
+  defaults.global.defaultFontFamily = "SpaceMono", "Arial", "Helvetica", "sans-serif";
 
   return (
     <div className="section__container">
@@ -100,13 +129,7 @@ export default function Stats() {
           <figure className="graph__container">{state.weekBlocksChart}</figure>
         </article>
         <article className="stats__block-graph">
-          <figure className="graph__container">
-            <img
-              className="graph"
-              src="https://moonbase-demo.s3.amazonaws.com/nodeperformance.png"
-              alt=""
-            />
-          </figure>
+          <figure className="graph__container">{lineChart}</figure>
         </article>
         <aside className="stats__info-A">
           <div className="card card--primary">
@@ -168,6 +191,43 @@ const blocksChart = (
         title: {
           display: true,
           text: "LTO Earned week of",
+        },
+        legendPositon: "bottom",
+        maintainAspectRatio: false,
+      }}
+    />
+  </div>
+);
+
+const lineChart = (
+  <div className="chart">
+    <Line
+      data={{
+        labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
+        datasets: [
+          {
+            data: [8,1,7,4,2,7,4],
+            label: 'fees',
+            backgroundColor: "green",
+            fontColor: "black",
+          },
+          {
+            data: [15,33,21,11,12,25, 8],
+            label: 'transactions',
+            backgroundColor: "#692db8",
+            fontColor: "black",
+          },
+        ],
+      }}
+      height={300}
+      width={500}
+      options={{
+        title: {
+          display: true,
+          text: "LTO Transactions/Fees Week of: 11/11",
+          position: "bottom",
+          fontColor: "black",
+          fontSize: 30,
         },
         legendPositon: "bottom",
         maintainAspectRatio: false,
