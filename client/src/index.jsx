@@ -9,6 +9,7 @@ import LTOPrice from './sections/LTOPrice.jsx';
 import Security from './sections/Security.jsx';
 import About from './sections/About.jsx';
 import Social from './sections/Social.jsx';
+import stars from './helper/createStars.jsx';
 
 function App() {
     return (
@@ -16,19 +17,22 @@ function App() {
             <section className='hero' id="hero">
                <Hero />
             </section>
-            <section className='rates' id="rates">
+            <section className='rates space' id="rates">
+                {stars()}
                 <Rates />
             </section>
             <section className="stats" id="stats">
                 <Stats />
             </section>
-            <section className="lto-price" id="LTOPrice">
+            <section className="lto-price space" id="LTOPrice">
+                {stars()}
                 <LTOPrice />
             </section>
             <section className="security" id="security">
                 <Security />
             </section>
-            <section className="about" id="about">
+            <section className="about space" id="about">
+                {stars()}
                 <About />
             </section>
             <section className="social" id="social">
