@@ -136,8 +136,8 @@ export default function Stats() {
             <header className="card__header">Blocks Earned</header>
             <p className="stats__text">
               Week of {state.weekStart.getMonth() + 1}/
-              {state.weekStart.getDate()} - {state.weekEnd.getMonth() + 1}/
-              {state.weekEnd.getDate()}
+              {state.weekStart.getDate() + 1} - {state.weekEnd.getMonth() + 1}/
+              {state.weekEnd.getDate() + 1}
               <br></br>
               LTO Moonbase minted {state.weekBlocksTotal} blocks on the LTO Blockchain
             </p>
@@ -148,8 +148,8 @@ export default function Stats() {
             <header className="card__header">Verified Transactions</header>
             <p className="stats__text">
               Week of {state.weekStart.getMonth() + 1}/
-              {state.weekStart.getDate()} - {state.weekEnd.getMonth() + 1}/
-              {state.weekEnd.getDate()}
+              {state.weekStart.getDate() + 1} - {state.weekEnd.getMonth() + 1}/
+              {state.weekEnd.getDate() + 1}
               <br></br>
               LTO Moonbase verified {2165} transactions on the LTO Blockchain
             </p>
@@ -160,8 +160,8 @@ export default function Stats() {
             <header className="card__header">LTO Earned</header>
             <p className="stats__text">
               Week of {state.weekStart.getMonth() + 1}/
-              {state.weekStart.getDate()} - {state.weekEnd.getMonth() + 1}/
-              {state.weekEnd.getDate()}
+              {state.weekStart.getDate() + 1} - {state.weekEnd.getMonth() + 1}/
+              {state.weekEnd.getDate() + 1}
               <br></br>
               LTO Moonbase earned {503} LTO in transactions for its leasers
             </p>

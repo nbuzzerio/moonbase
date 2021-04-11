@@ -66,7 +66,7 @@ export default function filterBlocksEarned(state, dispatch, ACTIONS) {
                   display: true,
                   text: `LTO Blocks Earned Week of: ${
                     weekStart.getMonth() + 1
-                  }/${weekStart.getDate()}`,
+                  }/${weekStart.getDate() + 1}`,
                   position: "bottom",
                   fontColor: "black",
                   fontSize: 30,

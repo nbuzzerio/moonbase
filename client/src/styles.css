@@ -586,24 +586,44 @@ color: #fff;
 /* Stars */
 section.space {
   position: relative;
+  overflow: hidden;
   z-index: -10;
   background-color: black;
   clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-  padding: 10vw 0;
+  padding: 5vw 0;
 }
 
 section.space.top {
-  clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
-  padding: 5vw 0 10vw;
+  clip-path: polygon(0 0%, 100% 0%, 100% 98%, 0% 100%);
 }
 
 section.space.bottom {
-  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-  padding: 10vw 0 5vw;
+  clip-path: polygon(0 1.5%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .space .card {
   background-color: black;
+}
+
+
+@media screen and (min-width: 768px) {
+  section.space.top {
+    clip-path: polygon(0 0%, 100% 0%, 100% 97%, 0% 100%);
+  }
+  
+  section.space.bottom {
+    clip-path: polygon(0 2.5%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section.space.top {
+    clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+  }
+  
+  section.space.bottom {
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  }
 }
 
 /* Rates */
