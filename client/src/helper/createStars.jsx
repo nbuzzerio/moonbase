@@ -10,7 +10,6 @@ stars = stars.map( (star, index) => {
         position: 'absolute',
         top,
         left,
-        zIndex: '-5', 
         height: size,
         width: size,
         backgroundColor: 'rgba(255, 255, 255, .71)',

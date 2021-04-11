@@ -70,7 +70,9 @@ h1 {
 }
   
 h2 {
-    font-size: 3rem;
+    font-size: 5rem;
+    position: relative;
+    z-index: 1;
 }
 
 h3 {
@@ -93,7 +95,7 @@ P {
   }
 
   h2 {
-    font-size: 8rem;
+    font-size: 10rem;
   }
 
   h3 {
@@ -212,8 +214,14 @@ color: #fff;
 /* Card */
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 5px 1px #f3f3f3;
+  box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  transition: transform 300ms, box-shadow 300ms;
+  z-index: 1;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 55px 5px rgba(0, 0, 0, 0.25);
 }
 
 .card__header, .card__body {
@@ -361,6 +369,25 @@ color: #fff;
   top: -50px;
   position: absolute;
   background: rgba(0, 0, 0, 0.9);
+}
+
+/* Section */
+.section__image {
+  width: 100%;
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .section__image {
+    width: 100%;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section__container {
+    max-width: 1200px;
+  }
 }
 
 /* Hero */
@@ -564,30 +591,10 @@ color: #fff;
   font-size: 2vw;
 }
 
-/* Section */
-.section__image {
-  width: 100%;
-  position: absolute;
-}
-
-@media screen and (min-width: 768px) {
-  .section__image {
-    width: 100%;
-    position: absolute;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .section__container {
-    max-width: 1200px;
-  }
-}
-
 /* Stars */
 section.space {
   position: relative;
   overflow: hidden;
-  z-index: -10;
   background-color: black;
   clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
   padding: 5vw 0;
@@ -603,8 +610,8 @@ section.space.bottom {
 
 .space .card {
   background-color: black;
+  box-shadow: 0px 0px 20px -1px rgba(255, 255, 255, 0.25);
 }
-
 
 @media screen and (min-width: 768px) {
   section.space.top {
@@ -635,12 +642,14 @@ section.space.bottom {
   text-align: center;
   padding-bottom: 1vw;
 }
-.rates .rates__header>h2 {
-  padding-top: 4vw;
+
+.rates__vip .card__header {
+  display: flex;
+  align-items: center;
 }
 
 .rates .card {
-  margin: 4vw 0;
+  margin: 6vw 4vw;
 }
 
 .rates .card__header {
@@ -656,6 +665,7 @@ section.space.bottom {
 @media screen and (min-width: 768px) { 
   .rates .rates__header>h2 {
     padding-top: 0vw;
+    margin-top: -2vw;
   }
 
   .rates__text {
@@ -664,7 +674,7 @@ section.space.bottom {
   }
 
   .rates .card {
-    margin: 3vw 10vw;
+    margin: 3vw 12vw;
   }
 
   .rates__info {
@@ -679,7 +689,7 @@ section.space.bottom {
   }
 
   .rates .card {
-    margin: 3vw 5vw;
+    margin: 2vw;
     font-size: 2rem;
   }
 
@@ -722,6 +732,10 @@ section.space.bottom {
   margin: 0 2vw;
 }
 
+.stats__total {
+  text-decoration: underline;
+}
+
 .graph {
   width: 90%;
 }
@@ -736,7 +750,7 @@ section.space.bottom {
   }
 
   .stats .card {
-    margin: 2vw 10vw;
+    margin: 3vw 12vw;
     font-size: 2rem;
   }
   .stats .card__header {
@@ -770,7 +784,7 @@ section.space.bottom {
   }
 
   .stats .card {
-    margin: 2vw 2vw;
+    margin: 2vw;
     font-size: 2rem;
   }
 
@@ -821,7 +835,7 @@ section.space.bottom {
   top: 0;
   left: 0;
   clip-path: inset(1% 20% 3% 23% round 100%);
-  z-index: -3;
+  z-index: 1;
 }
 
 /* Security */
@@ -854,9 +868,19 @@ section.space.bottom {
 }
 
 @media screen and (min-width: 768px) { 
+  .security .card {
+    margin: 3vw 12vw;
+  }
+
   .security__text {
     padding: 1vw;
     margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) { 
+  .security .card {
+    margin: 2vw;
   }
 }
 
@@ -870,6 +894,9 @@ section.space.bottom {
 .about .card {
   margin: 2vw 2vw;
   background-color: rgba(255, 255, 255, 0.9);
+}
+.about .card:hover {
+  transform: none;
 }
 
 .about__header {

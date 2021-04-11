@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import getBlockData from "../apiRequests/_getBlockData";
 import getNodeData from "../apiRequests/_getNodeData";
-import { Bar, Line, defaults, Radar, Bubble, Polar, HorizontalBar} from "react-chartjs-2";
+import { Bar, Line, defaults} from "react-chartjs-2";
 
 import filterBlocksEarned from "../helper/filterBlocksEarned.jsx";
 // import filterNodeTransactions from "../helper/filterNodeTransactions.jsx";
@@ -136,10 +136,10 @@ export default function Stats() {
             <header className="card__header">Blocks Earned</header>
             <p className="stats__text">
               Week of {state.weekStart.getMonth() + 1}/
-              {state.weekStart.getDate() + 1} - {state.weekEnd.getMonth() + 1}/
-              {state.weekEnd.getDate() + 1}
+              {state.weekStart.getDate()} - {state.weekEnd.getMonth() + 1}/
+              {state.weekEnd.getDate()}
               <br></br>
-              LTO Moonbase minted {state.weekBlocksTotal} blocks on the LTO Blockchain
+              LTO Moonbase minted <span className="stats__total">{state.weekBlocksTotal}</span> blocks on the LTO Blockchain
             </p>
           </div>
         </aside>
@@ -148,10 +148,10 @@ export default function Stats() {
             <header className="card__header">Verified Transactions</header>
             <p className="stats__text">
               Week of {state.weekStart.getMonth() + 1}/
-              {state.weekStart.getDate() + 1} - {state.weekEnd.getMonth() + 1}/
-              {state.weekEnd.getDate() + 1}
+              {state.weekStart.getDate()} - {state.weekEnd.getMonth() + 1}/
+              {state.weekEnd.getDate()}
               <br></br>
-              LTO Moonbase verified {2165} transactions on the LTO Blockchain
+              LTO Moonbase verified <span className="stats__total">{1616}</span> transactions on the LTO Blockchain
             </p>
           </div>
         </aside>
@@ -160,10 +160,10 @@ export default function Stats() {
             <header className="card__header">LTO Earned</header>
             <p className="stats__text">
               Week of {state.weekStart.getMonth() + 1}/
-              {state.weekStart.getDate() + 1} - {state.weekEnd.getMonth() + 1}/
-              {state.weekEnd.getDate() + 1}
+              {state.weekStart.getDate()} - {state.weekEnd.getMonth() + 1}/
+              {state.weekEnd.getDate()}
               <br></br>
-              LTO Moonbase earned {503} LTO in transactions for its leasers
+              LTO Moonbase earned <span className="stats__total">{401}</span> LTO in transactions for its leasers
             </p>
           </div>
         </aside>
@@ -206,14 +206,14 @@ const lineChart = (
         labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
         datasets: [
           {
-            data: [8,1,7,4,2,7,4],
-            label: 'fees',
+            data: [ 50.25, 31.16, 38.31, 143.42, 62.1, 52.7, 23.17],
+            label: 'Fees (LTO Earned)',
             backgroundColor: "green",
             fontColor: "black",
           },
           {
-            data: [15,33,21,11,12,25, 8],
-            label: 'transactions',
+            data: [166, 159, 130, 620, 169, 246, 126],
+            label: 'Transactions',
             backgroundColor: "#692db8",
             fontColor: "black",
           },
@@ -224,7 +224,7 @@ const lineChart = (
       options={{
         title: {
           display: true,
-          text: "LTO Transactions/Fees Week of: 11/11",
+          text: "LTO Transactions/Fees Week of: 4/4",
           position: "bottom",
           fontColor: "black",
           fontSize: 30,

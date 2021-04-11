@@ -32,8 +32,7 @@ export default function Rates() {
         </div>
         <div className="card card--secondary rates__vip">
           <header className="card__header">
-            <br/>
-            VIP
+            <div className="vip__header">VIP</div>
           </header>
           <div className="card_body">
             <p className="rates__text">
