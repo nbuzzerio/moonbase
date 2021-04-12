@@ -3,11 +3,21 @@ import React from "react";
 export default function Rates() {
   return (
     <div className="section__container">
-      <img
-        className="banner"
-        src="https://moonbase-demo.s3.amazonaws.com/ltomoonbase-banner.png"
-        alt="banner for lto moonbase"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcSet="https://lto-moonbase.s3.amazonaws.com/ltomoonbase-banner.webp"
+        ></source>
+        <source
+          type="image/jpg"
+          srcSet="https://lto-moonbase.s3.amazonaws.com/ltomoonbase-banner.jpg"
+        ></source>
+        <img
+          className="banner"
+          src="https://lto-moonbase.s3.amazonaws.com/ltomoonbase-banner.jpg"
+          alt="banner for lto moonbase"
+        />
+      </picture>
       <header className="rates__header">
         <h2>Leasing Information</h2>
       </header>

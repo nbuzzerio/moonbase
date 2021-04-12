@@ -7,4 +7,5 @@ bundle.js
 *.jpg
 *.jpeg
 s3_upload.js
+s3_upload_demo.js
 .env

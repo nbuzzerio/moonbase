@@ -7,6 +7,7 @@
     "start": "nodemon ./server/server.js",
     "react-dev": "webpack -d --watch",
     "react-prod": "webpack -p && node s3_upload.js",
+    "react-demo": "webpack -p && node s3_upload_demo.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

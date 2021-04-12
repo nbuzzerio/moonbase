@@ -7,7 +7,15 @@ export default function About() {
         <h2>About Us</h2>
         <article className="mission">
           <p>
-            The Moonbase team is dedicated to securing transactions in different blockchains by creating independent nodes for individuals and companies interested in leasing their cryptocurrencies. We believe in decentralization and proof of stake as it allows individuals the autonomy and option to stake their coins and gain rewards. Our team is made up of engineers, educators, and entrepreneurs. Together, we’re working to broaden people’s knowledge on the world of cryptocurrency and creating nodes to allow individuals to participate in consensus from anywhere in the world.
+            The Moonbase team is dedicated to securing transactions in different
+            blockchains by creating independent nodes for individuals and
+            companies interested in leasing their cryptocurrencies. We believe
+            in decentralization and proof of stake as it allows individuals the
+            autonomy and option to stake their coins and gain rewards. Our team
+            is made up of engineers, educators, and entrepreneurs. Together,
+            we’re working to broaden people’s knowledge on the world of
+            cryptocurrency and creating nodes to allow individuals to
+            participate in consensus from anywhere in the world.
           </p>
         </article>
       </header>
@@ -26,7 +34,8 @@ export default function About() {
               updates, suggestions please don’t hesitate to reach out.
             </p>
             <img
-              src="https://moonbase-demo.s3.amazonaws.com/staff1.png"
+              src="https://lto-moonbase.s3.amazonaws.com/staff1.jpg"
+              srcSet= "https://lto-moonbase.s3.amazonaws.com/staff1.webp, https://lto-moonbase.s3.amazonaws.com/staff1.jpg"
               alt="member image"
               className="about__member-img"
             />
@@ -37,8 +46,9 @@ export default function About() {
             <h3 className="about__member-name">Zak Hubner</h3>
           </header>
           <div className="about__member">
-            <img
-              src="https://moonbase-demo.s3.amazonaws.com/staff2.png"
+          <img
+              src="https://lto-moonbase.s3.amazonaws.com/staff2.jpg"
+              srcSet= "https://lto-moonbase.s3.amazonaws.com/staff2.webp, https://lto-moonbase.s3.amazonaws.com/staff2.jpg"
               alt="member image"
               className="about__member-img"
             />
@@ -68,7 +78,8 @@ export default function About() {
               in English, Korean, and Spanish.
             </p>
             <img
-              src="https://moonbase-demo.s3.amazonaws.com/staff3.png"
+              src="https://lto-moonbase.s3.amazonaws.com/staff3.jpg"
+              srcSet= "https://lto-moonbase.s3.amazonaws.com/staff3.webp, https://lto-moonbase.s3.amazonaws.com/staff3.jpg"
               alt="member image"
               className="about__member-img"
             />
@@ -79,13 +90,19 @@ export default function About() {
             <h3 className="about__member-name">Nicholas Buzzerio</h3>
           </header>
           <div className="about__member">
-            <img
-              src="https://moonbase-demo.s3.amazonaws.com/staff4.png"
+          <img
+              src="https://lto-moonbase.s3.amazonaws.com/staff4.jpg"
+              srcSet= "https://lto-moonbase.s3.amazonaws.com/staff4.webp, https://lto-moonbase.s3.amazonaws.com/staff4.jpg"
               alt="member image"
               className="about__member-img"
             />
             <p className="about__member-info">
-              Nicholas is a full-stack software engineer with a strong background in JavaScript. He is currently pursuing a Master’s in Data Science. Nicholas is the man when it comes to all things development for the MoonBase Node. He is always looking for newfound optimizations and efficiencies. Please contact him for project updates, suggestions, or software partnerships.
+              Nicholas is a full-stack software engineer with a strong
+              background in JavaScript. He is currently pursuing a Master’s in
+              Data Science. Nicholas is the man when it comes to all things
+              development for the MoonBase Node. He is always looking for
+              newfound optimizations and efficiencies. Please contact him for
+              project updates, suggestions, or software partnerships.
             </p>
           </div>
         </article>
