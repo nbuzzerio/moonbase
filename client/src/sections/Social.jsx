@@ -35,7 +35,7 @@ export default function Social() {
             </a>
           </li>
           <li className="list__item">
-            <a href="">
+            <a href="https://discord.gg/Mg2Pq9c7" target="_blank">
               <span className="icon-container">
                 <svg className="icon">
                   <use href="./sprite.svg#logo-discord"></use>
@@ -46,18 +46,18 @@ export default function Social() {
         </ul>
       </nav>
       <picture>
-        {/* <source 
-                            type="image/webp" 
-                            srcSet="https://moonbase-demo.s3.amazonaws.com/moonbase.png 1x, ../moonbase.png 2x">
-                        </source> */}
         <source
-          type="image/png"
-          srcSet="https://moonbase-demo.s3.amazonaws.com/astronaut.png"
+          type="image/webp"
+          srcSet="https://lto-moonbase.s3.amazonaws.com/astronaut-small.webp 960w, https://lto-moonbase.s3.amazonaws.com/astronaut-med.webp 1280w, https://lto-moonbase.s3.amazonaws.com/astronaut.webp 1920w"
+        ></source>
+        <source
+          type="image/jpg"
+          srcSet="https://lto-moonbase.s3.amazonaws.com/astronaut-small.jpg 960w, https://lto-moonbase.s3.amazonaws.com/astronaut-med.jpg 1280w, https://lto-moonbase.s3.amazonaws.com/astronaut.jpg 1920w"
         ></source>
         <img
           className="section__image social__image"
-          src="https://moonbase-demo.s3.amazonaws.com/astronaut.png"
-          alt=""
+          src="https://lto-moonbase.s3.amazonaws.com/astronaut.jpg"
+          alt="Image of a base on the moon"
         ></img>
       </picture>
     </React.Fragment>
