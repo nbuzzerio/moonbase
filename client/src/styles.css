@@ -607,6 +607,7 @@ section.space {
 
 section.space.top {
   clip-path: polygon(0 0%, 100% 0%, 100% 98%, 0% 100%);
+  padding-bottom: 10vw;
 }
 
 section.space.bottom {
@@ -630,9 +631,10 @@ section.space.bottom {
 
 @media screen and (min-width: 1024px) {
   section.space.top {
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 94%, 0% 100%); */
     clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
   }
-  
+
   section.space.bottom {
     clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
   }

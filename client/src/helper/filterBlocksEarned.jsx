@@ -105,7 +105,7 @@ export default function filterBlocksEarned(state, dispatch, ACTIONS) {
                   display: true,
                   text: `LTO Blocks Earned Week of: ${
                     weekStart.getMonth() + 1
-                  }/${weekStart.getDate()}`,
+                  }/${weekStart.getUTCDate()}`,
                   position: "bottom",
                   fontColor: "black",
                   fontSize: 30,
@@ -136,7 +136,7 @@ export default function filterBlocksEarned(state, dispatch, ACTIONS) {
                   display: true,
                   text: `LTO Transactions & Fees Week of: ${
                     weekStart.getMonth() + 1
-                  }/${weekStart.getDate()}`,
+                  }/${weekStart.getUTCDate()}`,
                   position: "bottom",
                   fontColor: "black",
                   fontSize: 30,

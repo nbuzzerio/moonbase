@@ -154,7 +154,7 @@ export default function Stats() {
               transactions on the LTO Blockchain.
               <br></br>
               <br></br>
-              So far <span className="stats__total">{state.currentTxsTotal}</span> transactions were varified this week.
+              So far <span className="stats__total">{state.currentTxsTotal}</span> transactions were verified this week.
             </p>
           </div>
         </aside>
@@ -190,7 +190,7 @@ const blocksChart = (
         datasets: [
           {
             data: [1, 1, 1, 1, 1, 1, 1],
-            backgroundColor: "#692db8",
+            backgroundColor: "#814bc9",
             fontColor: "black",
           },
         ],
@@ -230,13 +230,13 @@ const lineChart = (
           {
             data: [1, 1, 1, 1, 1, 1, 1],
             label: "Fees (LTO Earned)",
-            backgroundColor: "green",
+            backgroundColor: "#b0d4ff",
             fontColor: "black",
           },
           {
             data: [1, 1, 1, 1, 1, 1, 1],
             label: "Transactions",
-            backgroundColor: "#692db8",
+            backgroundColor: "#814bc9",
             fontColor: "black",
           },
         ],
