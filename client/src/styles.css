@@ -630,11 +630,50 @@ section.space.top.bottom {
 
 @media screen and (min-width: 768px) {
   section.space.top {
-    clip-path: polygon(0 0%, 100% 0%, 100% 97%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 96%, 0% 100%);
+  }
+
+  section.space.top::after {
+    content: '';
+    display: block;
+    background: linear-gradient(0deg, rgba(176,212,255, 1), rgba(157,110,218, 1));
+    clip-path: polygon(100% 0%, 60.5% 36%, 100% 97%);
+    position: absolute;
+    width: 100%;
+    height: 6.5%;
+    top: 93.5%;
   }
   
   section.space.bottom {
-    clip-path: polygon(0 2.5%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0%, 40% 2%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  
+  section.space.bottom::before {
+    content: '';
+    display: block;
+    background: linear-gradient(180deg, rgba(157,110,218, 1), rgba(176,212,255, 1));
+    clip-path: polygon(0% 2%, 39.5% 32%, 0% 50%);
+    position: absolute;
+    width: 100%;
+    height: 6.5%;
+    top: 0%;
+    z-index: 1;
+  }
+
+  section.space.top.bottom::before {
+    content: '';
+    display: block;
+    background: linear-gradient(180deg, rgba(157,110,218, 1), rgba(176,212,255, 1));
+    clip-path: polygon(0% 2%, 39.5% 62%, 0% 97%);
+    position: absolute;
+    width: 100%;
+    height: 6.5%;
+    top: 0%;
+    z-index: 1;
+  }
+
+  section.space.top.bottom {
+    clip-path: polygon(0 0%, 40% 4%, 100% 0%, 100% 100%, 60% 96%, 0% 100%);
   }
 }
 
