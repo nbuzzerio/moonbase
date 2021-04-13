@@ -24,7 +24,7 @@ function App() {
             <section className="stats" id="stats">
                 <Stats />
             </section>
-            <section className="lto-price space" id="LTOPrice">
+            <section className="lto-price space top bottom" id="LTOPrice">
                 <LTOPrice />
                 {stars()}
             </section>

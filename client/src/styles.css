@@ -608,15 +608,24 @@ section.space {
 section.space.top {
   clip-path: polygon(0 0%, 100% 0%, 100% 98%, 0% 100%);
   padding-bottom: 10vw;
+  margin-bottom: 5vw;
 }
 
 section.space.bottom {
   clip-path: polygon(0 1.5%, 100% 0%, 100% 100%, 0% 100%);
+  margin-top: 5vw;
 }
 
 .space .card {
   background-color: black;
   box-shadow: 0px 0px 20px -1px rgba(255, 255, 255, 0.25);
+}
+
+section.space.top.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -659,6 +668,10 @@ section.space.bottom {
     height: 10%;
     top: 0%;
     z-index: 1;
+  }
+
+  section.space.top.bottom {
+    clip-path: polygon(0 0%, 40% 6%, 100% 0%, 100% 100%, 60% 94%, 0% 100%);
   }
 }
 
@@ -853,17 +866,17 @@ section.space.bottom {
 /* LTOPrice */
 .lto-price {
   position: relative;
-  height: 55vw;
+  height: 60vw;
+  max-height: 800px;
   margin-top: 5vw;
 }
 
-.section__image.lto-price__image {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  clip-path: inset(1% 20% 3% 23% round 100%);
+.eclipse {
+  position: relative;
+  max-width: 750px;
+  max-height: 750px;
+  width: 55vw;
+  height: 55vw;
   z-index: 1;
 }
 
