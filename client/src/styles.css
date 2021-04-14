@@ -93,6 +93,26 @@ P {
 
   h1 {
     font-size: 3.5vw;
+
+    background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #fff;
+    animation: reveal 3000ms ease-in-out 200ms,
+               glow 2500ms linear 2000ms,
+               still 3500ms linear forwards 2000ms;
+      
+    }
+  @keyframes reveal {
+    80%{letter-spacing: 8px;}
+    100% {background-size: 300% 300%;}
+  }
+  @keyframes glow {
+    40% {text-shadow: 0 0 8px #fff;}
+  }
+  @keyframes still {
+    100% {color: var(--color-headings);}
   }
 
   h2 {
@@ -463,8 +483,19 @@ color: #fff;
     display: flex;
     justify-content: flex-end;
     height: 4vw;
-    top: 3vw;
+    top: -3vw;
     padding-left: 5vw;
+
+    animation-name: nav;
+    animation-delay: 3000ms;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes nav {
+    0% {top: -3vw;}
+    100% {top: 3vw;}
   }
 
   .hero .nav__list {
@@ -476,9 +507,20 @@ color: #fff;
   .hero__image {
       width: 100%;
       left: 0;
-      clip-path: circle(95% at 0 0);
+      clip-path: circle(0% at 0 0);
       -webkit-transform: scaleX(-1) translate(-6vw, 0vw);
       transform: scaleX(-1) translate(-6vw, 3vw);
+
+      animation-name: hero-image;
+      animation-delay: 1500ms;
+      animation-duration: 2000ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+  }
+
+  @keyframes hero-image {
+    0% {clip-path: circle(7% at 0 0);}
+    100% {clip-path: circle(95% at 0 0);}
   }
 }
 
@@ -536,7 +578,22 @@ color: #fff;
     align-self: center;
     margin-right: -5vw;
     margin-left: 0;
+
+    opacity: 0;
+  
+    animation-name: lease;
+    animation-delay: 4500ms;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
   }
+
+  @keyframes lease {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+  }
+
+  
 
   .hero .input {
       background-color: rgba(0,0,0,0);
