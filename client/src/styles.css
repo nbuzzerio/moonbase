@@ -605,20 +605,20 @@ section.space {
   text-shadow: 2px 3px 3px rgb(160, 160, 160, 0.3);
 }
 
+.space .card {
+  background-color: black;
+  box-shadow: 0px 0px 20px -1px rgba(255, 255, 255, 0.25);
+}
+
 section.space.top {
-  clip-path: polygon(0 0%, 100% 0%, 100% 98%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 98%, 0% 100%);
   padding-bottom: 10vw;
   margin-bottom: 5vw;
 }
 
 section.space.bottom {
-  clip-path: polygon(0 1.5%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0%, 40% 1%, 100% 0%, 100% 100%, 0% 100%);
   margin-top: 5vw;
-}
-
-.space .card {
-  background-color: black;
-  box-shadow: 0px 0px 20px -1px rgba(255, 255, 255, 0.25);
 }
 
 section.space.top.bottom {
@@ -626,6 +626,56 @@ section.space.top.bottom {
   justify-content: center;
   align-items: center;
   padding: 5vw 0;
+}
+
+section.space.top::after {
+  content: '';
+  display: block;
+  background: linear-gradient(0deg, rgba(176,212,255, 1), rgba(157,110,218, 1));
+  clip-path: polygon(100% 0%, 61% 40%, 100% 95%);
+  position: absolute;
+  width: 100%;
+  height: 3.5%;
+  top: 96.5%;
+}
+
+section.space.bottom::before {
+  content: '';
+  display: block;
+  background: linear-gradient(180deg, rgba(157,110,218, 1), rgba(176,212,255, 1));
+  clip-path: polygon(0% 2%, 39.4% 32%, 0% 50%);
+  position: absolute;
+  width: 100%;
+  height: 3.3%;
+  top: 0%;
+  z-index: 1;
+}
+
+section.space.top.bottom::after {
+  content: '';
+  display: block;
+  background: linear-gradient(0deg, rgba(176,212,255, 1), rgba(157,110,218, 1));
+  clip-path: polygon(100% 0%, 60.5% 36%, 100% 97%);
+  position: absolute;
+  width: 100%;
+  height: 6.5%;
+  top: 93.5%;
+}
+
+section.space.top.bottom::before {
+  content: '';
+  display: block;
+  background: linear-gradient(180deg, rgba(157,110,218, 1), rgba(176,212,255, 1));
+  clip-path: polygon(0% 2%, 39.5% 62%, 0% 97%);
+  position: absolute;
+  width: 100%;
+  height: 6.5%;
+  top: 0%;
+  z-index: 1;
+}
+
+section.space.top.bottom {
+  clip-path: polygon(0 0%, 40% 4%, 100% 0%, 100% 100%, 60% 96%, 0% 100%);
 }
 
 @media screen and (min-width: 768px) {
@@ -682,7 +732,7 @@ section.space.top.bottom {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 94%, 0% 100%);
   }
 
-  section.space.top::after {
+  section.space.top::after, section.space.top.bottom::after  {
     content: '';
     display: block;
     background: linear-gradient(0deg, rgba(176,212,255, 1), rgba(157,110,218, 1));
@@ -697,7 +747,7 @@ section.space.top.bottom {
     clip-path: polygon(0 0%, 40% 6%, 100% 0%, 100% 100%, 0% 100%);
   }
 
-  section.space.bottom::before {
+  section.space.bottom::before, section.space.top.bottom::before {
     content: '';
     display: block;
     background: linear-gradient(180deg, rgba(157,110,218, 1), rgba(176,212,255, 1));
