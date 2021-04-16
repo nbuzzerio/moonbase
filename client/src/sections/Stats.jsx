@@ -8,6 +8,7 @@ export default function Stats() {
   const ACTIONS = {
     SET_NODE_DATA: "set-node-data",
     SET_BLOCK_DATA: "set-block-data",
+    SET_WEEK_PAGE: "set-week-page",
     SET_CURRENT_WEEK_DAY: "set-week-day",
     SET_WEEK_START: "set-week-start",
     SET_WEEK_END: "set-week-end",
@@ -18,7 +19,7 @@ export default function Stats() {
     SET_WEEK_TXS_TOTAL: "set-week-txs-total",
     SET_WEEK_FEES_TOTAL: "set-week-fees-total",
 
-    SET_WEEK_TOTALS: "set-week-totals"
+    SET_WEEK_TOTALS: "set-week-totals",
   };
 
   function reducer(state, action) {
@@ -27,6 +28,8 @@ export default function Stats() {
         return { ...state, nodeData: action.payload.nodeData };
       case ACTIONS.SET_BLOCK_DATA:
         return { ...state, blockData: action.payload.blockData };
+      case ACTIONS.SET_WEEK_PAGE:
+        return { ...state, weekPage: action.payload.weekPage };
       case ACTIONS.SET_CURRENT_WEEK_DAY:
         return { ...state, currentWeekDay: action.payload.currentWeekDay };
       case ACTIONS.SET_WEEK_START:
@@ -42,21 +45,21 @@ export default function Stats() {
           weekTxsChart: action.payload.weekTxsChart,
         };
 
-      case ACTIONS.SET_WEEK_TOTALS: 
+      case ACTIONS.SET_WEEK_TOTALS:
         return {
           ...state,
           weekBlocksTotal: action.payload.weekBlocksTotal,
           weekTxsTotal: action.payload.weekTxsTotal,
           weekFeesTotal: action.payload.weekFeesTotal,
-        }
-      
-      case ACTIONS.SET_CURRENT_TOTALS: 
+        };
+
+      case ACTIONS.SET_CURRENT_TOTALS:
         return {
           ...state,
           currentBlocksTotal: action.payload.currentBlocksTotal,
           currentTxsTotal: action.payload.currentTxsTotal,
           currentFeesTotal: action.payload.currentFeesTotal,
-        }
+        };
 
       default:
         return state;
@@ -66,6 +69,7 @@ export default function Stats() {
   const [state, dispatch] = useReducer(reducer, {
     nodeData: null,
     currentWeekDay: null,
+    weekPage: 0,
     weekStart: new Date(),
     weekEnd: new Date(),
     chartDataBool: false,
@@ -75,7 +79,7 @@ export default function Stats() {
     weekBlocksTotal: 0,
     weekTxsTotal: 0,
     weekFeesTotal: 0,
-    
+
     currentBlocksTotal: 0,
     currentTxsTotal: 0,
     currentFeesTotal: 0,
@@ -87,7 +91,7 @@ export default function Stats() {
       .then((data) => {
         dispatch({
           type: ACTIONS.SET_NODE_DATA,
-          payload: { nodeData: data[0].slice(790) },
+          payload: { nodeData: data[0].slice(787) },
         });
         dispatch({
           type: ACTIONS.SET_CHART_DATA_BOOL,
@@ -103,6 +107,15 @@ export default function Stats() {
     };
   }, []);
 
+  useEffect(() => {
+    if (state.nodeData) {
+      dispatch({
+        type: ACTIONS.SET_CHART_DATA_BOOL,
+        payload: { chartDataBool: true },
+      });
+    }
+  }, [state.weekPage]);
+
   filterBlocksEarned(state, dispatch, ACTIONS);
 
   (defaults.global.defaultFontFamily = "SpaceMono"),
@@ -110,11 +123,40 @@ export default function Stats() {
     "Helvetica",
     "sans-serif";
 
+  const handlePrev = () => {
+    dispatch({
+      type: ACTIONS.SET_WEEK_PAGE,
+      payload: { weekPage: state.weekPage + 1 },
+    });
+  };
+
+  const handleNext = () => {
+    dispatch({
+      type: ACTIONS.SET_WEEK_PAGE,
+      payload: { weekPage: state.weekPage - 1 },
+    });
+  };
+
+  let prevWeek;
+  let nextWeek;
+  let currentBlocksTotal;
+  let currentTxsTotal;
+  let currentFeesTotal;
+  
+  statsWeekView();
+
   return (
     <div className="section__container">
       <header className="stats__header">
         <h2>Node Statistics</h2>
       </header>
+      <div className="stats__week">
+        {prevWeek}
+        <h3 className="stats__week-title">
+          Week of {new Date(state.weekStart).toString().slice(3, 10)}
+        </h3>
+        {nextWeek}
+      </div>
       <div className="grid grid--2x6">
         <article className="stats__LTO-graph">
           <figure className="graph__container">{state.weekBlocksChart}</figure>
@@ -127,15 +169,15 @@ export default function Stats() {
             <header className="card__header">Blocks Earned</header>
             <p className="stats__text">
               Week of {state.weekStart.getUTCMonth() + 1}/
-              {state.weekStart.getUTCDate()} - {state.weekEnd.getUTCMonth() + 1}/
-              {state.weekEnd.getUTCDate()}
+              {state.weekStart.getUTCDate()} - {state.weekEnd.getUTCMonth() + 1}
+              /{state.weekEnd.getUTCDate()}
               <br></br>
               LTO Moonbase minted{" "}
               <span className="stats__total">{state.weekBlocksTotal}</span>{" "}
               blocks on the LTO Blockchain.
               <br></br>
               <br></br>
-              So far <span className="stats__total">{state.currentBlocksTotal}</span> blocks were minted this week.
+              {currentBlocksTotal}
             </p>
           </div>
         </aside>
@@ -144,8 +186,8 @@ export default function Stats() {
             <header className="card__header">Verified Transactions</header>
             <p className="stats__text">
               Week of {state.weekStart.getUTCMonth() + 1}/
-              {state.weekStart.getUTCDate()} - {state.weekEnd.getUTCMonth() + 1}/
-              {state.weekEnd.getUTCDate()}
+              {state.weekStart.getUTCDate()} - {state.weekEnd.getUTCMonth() + 1}
+              /{state.weekEnd.getUTCDate()}
               <br></br>
               LTO Moonbase verified{" "}
               <span className="stats__total">
@@ -154,7 +196,7 @@ export default function Stats() {
               transactions on the LTO Blockchain.
               <br></br>
               <br></br>
-              So far <span className="stats__total">{state.currentTxsTotal}</span> transactions were verified this week.
+              {currentTxsTotal}
             </p>
           </div>
         </aside>
@@ -163,8 +205,8 @@ export default function Stats() {
             <header className="card__header">LTO Earned</header>
             <p className="stats__text">
               Week of {state.weekStart.getUTCMonth() + 1}/
-              {state.weekStart.getUTCDate()} - {state.weekEnd.getUTCMonth() + 1}/
-              {state.weekEnd.getUTCDate()}
+              {state.weekStart.getUTCDate()} - {state.weekEnd.getUTCMonth() + 1}
+              /{state.weekEnd.getUTCDate()}
               <br></br>
               LTO Moonbase earned{" "}
               <span className="stats__total">
@@ -173,13 +215,81 @@ export default function Stats() {
               LTO in transactions for its leasers.
               <br></br>
               <br></br>
-              So far <span className="stats__total">{Math.floor(state.currentFeesTotal)}</span> LTO was earned this week.
+              {currentFeesTotal}
             </p>
           </div>
         </aside>
       </div>
     </div>
   );
+
+  function statsWeekView() {
+    if (!state.nodeData ||
+      Math.floor(state.nodeData.length / 7) - 2 > state.weekPage) {
+      prevWeek = (
+        <div className="stats__week-btn" onClick={handlePrev}>
+          {"<- Last"}
+        </div>
+      );
+    } else {
+      prevWeek = <div className="stats__week-btn boundary">{"<- Last"}</div>;
+    }
+
+
+    if (state.weekPage > 0) {
+      nextWeek = (
+        <div className="stats__week-btn" onClick={handleNext}>
+          {"Next ->"}
+        </div>
+      );
+      currentBlocksTotal = (
+        <span>
+          <span className="stats__total">{state.currentBlocksTotal}</span> blocks
+        were minted since {state.weekStart.getUTCMonth() + 1}/
+          {state.weekStart.getUTCDate()}.
+        </span>
+      );
+      currentTxsTotal = (
+        <span>
+          <span className="stats__total">{state.currentTxsTotal}</span>{" "}
+        transactions were verified since {state.weekStart.getUTCMonth() + 1}/
+          {state.weekStart.getUTCDate()}.
+        </span>
+      );
+      currentFeesTotal = (
+        <span>
+          <span className="stats__total">
+            {Math.floor(state.currentFeesTotal)}
+          </span>{" "}
+        LTO was earned since {state.weekStart.getUTCMonth() + 1}/
+          {state.weekStart.getUTCDate()}.
+        </span>
+      );
+    } else {
+      nextWeek = <div className="stats__week-btn boundary">{"Next ->"}</div>;
+      currentBlocksTotal = (
+        <span>
+        So far <span className="stats__total">{state.currentBlocksTotal}</span>{" "}
+        blocks were minted this week.
+        </span>
+      );
+      currentTxsTotal = (
+        <span>
+        So far <span className="stats__total">{state.currentTxsTotal}</span>{" "}
+        transactions were verified this week.
+        </span>
+      );
+      currentFeesTotal = (
+        <span>
+        So far{" "}
+          <span className="stats__total">
+            {Math.floor(state.currentFeesTotal)}
+          </span>{" "}
+        LTO was earned this week.
+        </span>
+      );
+    }
+  }
 }
 
 const blocksChart = (

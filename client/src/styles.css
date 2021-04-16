@@ -952,6 +952,30 @@ section.space.top.bottom {
   width: 90%;
 }
 
+.stats__week {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.stats__week-title {
+  padding: 0;
+  margin: 0;
+  font-size: 5rem;
+}
+
+.stats__week-btn{
+  text-decoration: underline;
+  font-size: 3rem;
+  font-weight: bold;
+  user-select: none;
+  color: rgba(176,212,255, 1);
+}
+.stats__week-btn.boundary{
+  color: gray;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) { 
   .chart {
     max-width: 100%;
