@@ -6,15 +6,15 @@ export default function Rates() {
       <picture>
         <source
           type="image/webp"
-          srcSet="https://lto-moonbase.s3.amazonaws.com/ltomoonbase-banner.webp"
+          srcSet="https://lto-moonbase.s3.amazonaws.com/moonbase-banner-logo.webp"
         ></source>
         <source
-          type="image/jpg"
-          srcSet="https://lto-moonbase.s3.amazonaws.com/ltomoonbase-banner.jpg"
+          type="image/png"
+          srcSet="https://lto-moonbase.s3.amazonaws.com/moonbase-banner-logo.png"
         ></source>
         <img
           className="banner"
-          src="https://lto-moonbase.s3.amazonaws.com/ltomoonbase-banner.jpg"
+          src="https://lto-moonbase.s3.amazonaws.com/moonbase-banner-logo.png"
           alt="banner for lto moonbase"
         />
       </picture>
