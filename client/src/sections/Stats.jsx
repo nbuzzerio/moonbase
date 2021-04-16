@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import getNodeData from "../apiRequests/_getNodeData";
 import { Bar, Line, defaults } from "react-chartjs-2";
+import moment from 'moment';
 
 import filterBlocksEarned from "../helper/filterBlocksEarned.jsx";
 
@@ -153,7 +154,7 @@ export default function Stats() {
       <div className="stats__week">
         {prevWeek}
         <h3 className="stats__week-title">
-          Week of {new Date(state.weekStart).toString().slice(3, 10)}
+          Week of {moment(new Date(state.weekStart)).format("MMMM Do")}
         </h3>
         {nextWeek}
       </div>
@@ -245,15 +246,13 @@ export default function Stats() {
       currentBlocksTotal = (
         <span>
           <span className="stats__total">{state.currentBlocksTotal}</span> blocks
-        were minted since {state.weekStart.getUTCMonth() + 1}/
-          {state.weekStart.getUTCDate()}.
+        were minted since {moment(new Date(state.weekStart)).format("MMMM Do")}.
         </span>
       );
       currentTxsTotal = (
         <span>
           <span className="stats__total">{state.currentTxsTotal}</span>{" "}
-        transactions were verified since {state.weekStart.getUTCMonth() + 1}/
-          {state.weekStart.getUTCDate()}.
+        transactions were verified since {moment(new Date(state.weekStart)).format("MMMM Do")}.
         </span>
       );
       currentFeesTotal = (
@@ -261,8 +260,7 @@ export default function Stats() {
           <span className="stats__total">
             {Math.floor(state.currentFeesTotal)}
           </span>{" "}
-        LTO was earned since {state.weekStart.getUTCMonth() + 1}/
-          {state.weekStart.getUTCDate()}.
+        LTO was earned since {moment(new Date(state.weekStart)).format("MMMM Do")}.
         </span>
       );
     } else {
