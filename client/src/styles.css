@@ -956,18 +956,19 @@ section.space.top.bottom {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
+  align-items: baseline;
 }
 
 .stats__week-title {
   padding: 0;
   margin: 0;
-  font-size: 5rem;
+  font-size: 2.2rem;
   text-shadow: 2px 4px 3px rgb(0 0 0 / 30%);
 }
 
 .stats__week-btn{
   text-decoration: underline;
-  font-size: 3rem;
+  font-size: 1rem;
   font-weight: bold;
   user-select: none;
   color: rgba(176,212,255, 1);
@@ -1002,11 +1003,27 @@ section.space.top.bottom {
   .graph {
     width: 70%;
   }
+
+  .stats__week-title {
+    font-size: 4rem;
+  }
+  
+  .stats__week-btn{
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .graph {
     width: 100%;
+  }
+
+  .stats__week-title {
+    font-size: 5rem;
+  }
+  
+  .stats__week-btn{
+    font-size: 3rem;
   }
 
   .stats .graph__container {
@@ -1042,6 +1059,7 @@ section.space.top.bottom {
     grid-row: 1 / span 1;
     display: flex;
     justify-content: center;
+    padding-top: 1.5rem;
   }
 
   .stats__info-A {
