@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import React from 'react';
+import React, {useEffect} from 'react';
 import './styles.css';
 
 import Hero from './sections/Hero.jsx';
@@ -11,7 +11,32 @@ import About from './sections/About.jsx';
 import Social from './sections/Social.jsx';
 import stars from './helper/createStars.jsx';
 
-function App() {
+function App() {   
+
+    useEffect(() => {
+        const containers = document.querySelectorAll('.section__container');
+    
+        const selectorsOptions = {
+            rootMargin: '0px 0px -100px 0px',
+            threshold: .3
+        }
+        const appearOnScroll = new IntersectionObserver( (selectors, appearOnScroll) => {
+            selectors.forEach( selector => {
+                
+                if (selector.isIntersecting) {
+                    selector.target.classList.add('appear');
+                    appearOnScroll.unobserve(selector.target);
+                    console.log('APPEAR')
+                }
+                return
+            })
+        }, selectorsOptions);
+    
+        containers.forEach(container => {
+            appearOnScroll.observe(container);
+        })
+    }, [])
+
     return (
         <React.Fragment>
             <section className='hero' id="hero">

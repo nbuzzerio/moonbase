@@ -400,6 +400,15 @@ color: #fff;
   position: absolute;
 }
 
+.section__container {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+.section__container.appear {
+  opacity: 1;
+}
+
 @media screen and (min-width: 768px) {
   .section__image {
     width: 100%;
@@ -860,8 +869,14 @@ section.space.top.bottom {
   width: 100%;
   height: 15%;
   top: 0%;
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
   z-index: 1;
+  height: .1%;
+  clip-path: polygon(-75% 0, 50% 100%, 175% 0);
+  transition: height 1000ms ease-in;
+}
+
+.rates.appear::before {
+  height: 12%;
 }
 
 @media screen and (min-width: 768px) { 
@@ -884,7 +899,6 @@ section.space.top.bottom {
   }
 
   .rates::before {
-    height: 20%;
     clip-path: polygon(0 0, 50% 100%, 100% 0);
   }
 }
@@ -909,9 +923,8 @@ section.space.top.bottom {
     display: flex;
   }
 
-  .rates::before {
-    height: 25%;
-    clip-path: polygon(0 0, 50% 100%, 100% 0);
+  .rates.appear::before {
+    height: 15%;
   }
 }
 
