@@ -154,7 +154,7 @@ export default function Stats() {
       <div className="stats__week">
         {prevWeek}
         <h3 className="stats__week-title">
-          Week of {moment(new Date(state.weekStart)).format("MMMM Do")}
+          Week of {moment(new Date(new Date(state.weekStart).valueOf() + 14400000)).format("MMMM Do")}
         </h3>
         {nextWeek}
       </div>
@@ -246,13 +246,13 @@ export default function Stats() {
       currentBlocksTotal = (
         <span>
           <span className="stats__total">{state.currentBlocksTotal}</span> blocks
-        were minted since {moment(new Date(state.weekStart)).format("MMMM Do")}.
+        were minted since {moment(new Date(new Date(state.weekStart).valueOf() + 14400000)).format("MMMM Do")}.
         </span>
       );
       currentTxsTotal = (
         <span>
           <span className="stats__total">{state.currentTxsTotal}</span>{" "}
-        transactions were verified since {moment(new Date(state.weekStart)).format("MMMM Do")}.
+        transactions were verified since {moment(new Date(new Date(state.weekStart).valueOf() + 14400000)).format("MMMM Do")}.
         </span>
       );
       currentFeesTotal = (
@@ -260,7 +260,7 @@ export default function Stats() {
           <span className="stats__total">
             {Math.floor(state.currentFeesTotal)}
           </span>{" "}
-        LTO was earned since {moment(new Date(state.weekStart)).format("MMMM Do")}.
+        LTO was earned since {moment(new Date(new Date(state.weekStart).valueOf() + 14400000)).format("MMMM Do")}.
         </span>
       );
     } else {
