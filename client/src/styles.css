@@ -662,6 +662,10 @@ color: #fff;
 
 /* Stars */
 .stars {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
   opacity: 0;
   transition: opacity 1000ms 250ms ease-in;
 }
@@ -880,12 +884,15 @@ section.space.top.bottom {
   top: 0%;
   z-index: 1;
   height: .1%;
+  opacity: 0;
   clip-path: polygon(-75% 0, 50% 100%, 175% 0);
-  transition: height 1000ms ease-in;
+  transition: height 1000ms ease-in,
+              opacity 500ms 450ms ease-in
 }
 
 .rates.appear::before {
   height: 12%;
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) { 
