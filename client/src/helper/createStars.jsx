@@ -27,8 +27,8 @@ stars = stars.map( (star, index) => {
   })
 
   return (
-    <React.Fragment>
+    <div className='stars'>
       {stars}
-    </React.Fragment>
+    </div>
   )
 } 

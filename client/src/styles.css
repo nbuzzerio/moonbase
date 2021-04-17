@@ -661,6 +661,15 @@ color: #fff;
 }
 
 /* Stars */
+.stars {
+  opacity: 0;
+  transition: opacity 1000ms 250ms ease-in;
+}
+
+.stars.appear {
+  opacity: 1;
+}
+
 section.space {
   position: relative;
   overflow: hidden;
