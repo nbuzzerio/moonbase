@@ -40,8 +40,14 @@ body {
     font-size: 2.4rem;
     line-height: 1.5;
     padding: 0; 
-    margin: 0;  
+    margin: 0; 
   }
+
+.main {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
+}
 
 h1,
 h2,
@@ -395,6 +401,10 @@ color: #fff;
 }
 
 /* Section */
+section {
+  scroll-snap-align: start;
+}
+
 .section__image {
   width: 100%;
   position: absolute;
@@ -414,11 +424,31 @@ color: #fff;
     width: 100%;
     position: absolute;
   }
+
+  section#about {
+    scroll-margin-top: -150px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .section__container {
     max-width: 1200px;
+  }
+
+  section#rates {
+    scroll-margin-top: -100px;
+  }
+  
+  section#stats {
+    scroll-margin-top: -100px;
+  }
+  
+  section#security {
+    scroll-margin-top: -50px;
+  }
+  
+  section#social {
+    scroll-snap-align: none;
   }
 }
 

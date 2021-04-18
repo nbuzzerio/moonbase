@@ -43,7 +43,7 @@ function App() {
   }, []);
 
   return (
-    <React.Fragment>
+    <div className='main'>
       <section className="hero" id="hero">
         <Hero />
       </section>
@@ -68,7 +68,7 @@ function App() {
       <section className="social" id="social">
         <Social />
       </section>
-    </React.Fragment>
+    </div>
   );
 }
 
