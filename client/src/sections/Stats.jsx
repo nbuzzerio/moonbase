@@ -268,7 +268,7 @@ export default function Stats() {
       currentBlocksTotal = (
         <span>
         So far <span className="stats__total">{state.currentBlocksTotal}</span>{" "}
-        blocks were minted this week.
+        {(state.currentBlocksTotal === 1) ? 'block was' : 'blocks were'} minted this week.
         </span>
       );
       currentTxsTotal = (

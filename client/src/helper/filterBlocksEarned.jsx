@@ -32,7 +32,12 @@ export default function filterBlocksEarned(state, dispatch, ACTIONS) {
       },
     });
 
-    let sunNodeData = state.nodeData.length - (currentWeekDayUTC + 8 + (7 * state.weekPage));
+    let addMissingDay = 0;
+    if (new Date(Date.now()).getUTCDate() !== new Date(state.nodeData[state.nodeData.length - 1].date).getUTCDate()) {
+      addMissingDay = 1;
+    }
+
+    let sunNodeData = state.nodeData.length - (currentWeekDayUTC + (8 - addMissingDay) + (7 * state.weekPage));
     let weekBlocksTotal = 0;
     let weekTxsTotal = 0;
     let weekFeesTotal = 0;

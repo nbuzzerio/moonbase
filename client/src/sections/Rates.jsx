@@ -15,7 +15,6 @@ export default function Rates() {
             if (selector.isIntersecting) {
                 selector.target.classList.add('appear');
                 appearOnScroll.unobserve(selector.target);
-                console.log('APPEAR')
             }
             return
         })
